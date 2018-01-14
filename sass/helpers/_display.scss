@@ -1,0 +1,26 @@
+ /* Displays */
+			
+.dB {display:block;}
+.dIB{ display:inline-block;}
+.dI{ display:inline;}
+.dFB{ display:flex-box;}
+.-table{ display:table;}/* <table>*/
+.-tr{display: table-row;} /* <tr>*/
+.-thead , .hide-tbl-thead-s{display:table-header-group;} /* <thead>*/
+.-tfoot{display:table-header-group;} /* <thead>*/
+.-tbody{display:table-row-group;} /* <tbody>*/
+.-td{display: table-cell; vertical-align: middle;} /* <td>*/
+
+@media only screen and (max-width:45em) { 
+    .-mTable td , :not(._col-3) .td {display: block;}
+    .hide-tbl-thead-s{ display: none;}
+}
+
+
+
+html body .hide { display: none;}
+.vMid > ._vitems { @extend .dIB; vertical-align: middle;}
+
+.visible {visibility: visible;}
+.hidden {visibility: hidden;}
+.ofH { overflow: hidden;}

@@ -1,0 +1,92 @@
+@import '../mixins/_mixins.scss';
+/*utility*/
+
+.uCase { text-transform: uppercase;}
+.camCase { text-transform: capitalize;}
+.lCase { text-transform: lowercase;}
+.hand { cursor: pointer;}
+
+.bdr:not(.bdr0) { border:1px solid #e1e1e1; }
+.bdr.error { border:1px solid #d6140b; }
+.bdr-B { @include bdr(0,0,1px,0,#e1e1e1,solid);}
+.outline { outline:1px solid #ddd;}
+.bdr0 { border:0;}
+.bR3 { border-radius:3px; }
+
+body {
+.m0 {margin:0;} .m10 {margin:rem(10);}
+.mTB0 {margin-top:0;margin-bottom: 0;}
+.mTB10 {margin:0.625rem 0;}
+.mLR10 {margin:0 0.625rem;}
+.mT10{margin-top:0.625rem;}
+.mB10{margin-bottom:0.625rem;}
+.mT5{margin-top:0.3125rem;}
+.mB5{margin-bottom:0.3125rem;}
+
+
+
+.p0 {padding:0;}
+.pTB10 {padding:0.625rem 0;}
+.pLR10 {padding:0 0.625rem;}
+.pT10{padding-top:0.625rem; }
+.pB10{padding-bottom:0.625rem; }
+.pd10 {padding:0.625rem;}
+.pd5{padding: 0.3125rem;}
+.pd15 {padding:rem(15);}
+.pL0{padding-left: 0;}
+.pR0{padding-right: 0;}
+}
+
+
+._z9 {z-index: 9;}
+._z99 {z-index: 99;}
+._z999 {z-index: 999;}
+
+.-z1 {@include shadow (0, 0, 1rem, rgba(0,0,0,0.5));  }
+[class^="fab"].-z1 { @include shadow (0,0.5rem,0.5rem, rgba(0, 0, 0, 0.25)); }
+
+button.-z1 {
+    @include shadow (0,3px,0.3rem, rgba(0, 0, 0, 0.2)); transition: all 0.1s;
+&:hover{ @include shadow (0, 4px, 0.7rem, rgba(0,0,0,0.3)); }
+}
+
+.-Yscroll-area { max-height: 7rem; overflow-y: auto;}
+
+.mH10 { min-height: 0.625rem;}
+
+
+button{
+
+    &.btn-bg-blue { background-color: #4ca0ea;}
+    &.gradBtn , .gradBtn {
+        @include linearGrad(45deg,#f60,#f99d31); 
+        border-radius: 2px;
+
+        &:hover {@include linearGrad(-45deg,#f60,#f99d31);}
+    }
+}
+
+.card {   @include shadow (0,0,0.1rem, rgba(0, 0, 0, 0.25)); border-radius:3px; }
+
+
+
+/*A tab & accordian utility with scss*/
+
+.-tabs + .-tabContent input[type="radio"]:checked + * ,
+.-accordian input[type="radio"]:checked + * ,
+.-accordian input[type="checkbox"]:checked + * { display: block;}
+.-tabs label , .-Obar{
+    &:not(.active):not(.clr-p):not(:hover){
+        color:#909090;
+    }
+    &.active:after , &:hover:after{
+        content: "";
+        width:30%;
+        border:0.1rem solid #FF8F00;
+        position: absolute;
+        bottom:-1rem;
+        left:0;
+    }
+}
+
+/*A tab utility with scss*/

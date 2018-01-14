@@ -1,0 +1,30 @@
+// colors
+
+$primary: #434343;
+$primary2: #808080;
+$secondary: #f3f5f7;
+$white:#fff;
+$danger:#d6140b;
+$mGreen:#009769;
+$blue :rgba(0, 153, 255, 0.99);
+$orange:#f99d31;
+$navy_blue:#528a9e;
+
+
+body { color: $primary; background-color: $secondary;}
+.bg-f { background-color: $white;}
+.bg-Lgry{ background-color:$secondary ;}
+.bg-gry { background-color:$primary2 ;}
+.bg-blue{ background-color:$blue ;}
+.bg-green{background-color:$mGreen; }
+.bg-navy-blue{background-color:$navy_blue;}
+.clr-p { color:$primary; }
+.clr-p2 { color:$primary2; }
+.clr-s { color:$secondary;}
+.clr-f { color:$white; }
+.clr-0 { color:$primary; }
+.clr-red { color:$danger; }
+.clr-grn { color:$mGreen; }
+.clr-info {color:#FF8F00;}
+.clr-orange{color:$orange;}
+.clr-blue{color: $blue;}

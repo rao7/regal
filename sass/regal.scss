@@ -1,0 +1,23 @@
+/* REGAL SASS framework */
+
+// REGAL GRID - SCSS
+@import 'helpers/_normalize.scss';
+@import 'helpers/_font.scss';
+@import 'grid/_grid.scss';
+@import 'helpers/_utility.scss';
+@import 'helpers/_alignment.scss';
+@import 'helpers/_colors.scss';
+@import 'helpers/_display.scss';
+@import 'helpers/_form.scss';
+
+
+
+//custom resets
+
+a , .clr-blu{ text-decoration: none; color:#1e88e5;}
+:not(button) > a:hover {text-decoration: underline; cursor:pointer;}
+ul:not(.disc) { list-style: none;}
+
+
+
+//custom css

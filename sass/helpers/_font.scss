@@ -1,0 +1,63 @@
+
+/* #1 FONT */
+
+$size :16;
+$font-height: 1.4;
+$breakpoint-small: 33.75em; // 540px
+$breakpoint-med: 45em; // 720px
+$breakpoint-large: 60em; // 960px
+
+:root { font-size: $size + px; 
+    @media only screen and (max-width: $breakpoint-small) { 
+        font-size: ($size - 4 ) + px; }
+        @media only screen and (max-width: $breakpoint-large) { 
+            font-size: ($size - 2 ) + px; }
+ 
+}
+
+
+$font-family: 'Lato', Helvetica, sans-serif;
+
+
+html, body { height: 100%; width: 100%; font-family: $font-family; line-height: $font-height; }
+
+
+@mixin px2em($px)
+{
+    font-size: ($px / $size)+rem;
+}
+    /* -Weight(fw) */
+    .fw-3 { font-weight:300;}
+    .fw-4 { font-weight:400;}
+    .fw-5 { font-weight:500;}
+    .fw-6 { font-weight:600;}
+    .fw-7 { font-weight:700;}
+			
+		/* -Size(fs) */	
+    .fs-10 { @include px2em(10); } // 10px
+    .fs-12 { @include px2em(12); } // 12px
+    .fs-13 { @include px2em(13); } // 12px
+    .fs-14 { @include px2em(14);} 
+    .fs-16 { @include px2em(16);}
+    .fs-18 { @include px2em(18);}
+    .fs-20 { @include px2em(20);}
+    .fs-22 { @include px2em(22);}
+    .fs-26 { @include px2em(26);}
+    .fs-32 { @include px2em(32);}
+
+
+/*  headings */
+
+h1 {  @extend .fs-32; }
+
+h2 {  @extend .fs-26; }
+
+h3 {  @extend .fs-22; }
+
+h4 {  @extend .fs-20; }
+
+h5 {  @extend .fs-16; }
+
+h6 {  @extend .fs-12; }
+
+
