@@ -11,15 +11,7 @@
 .-tbody{display:table-row-group;} /* <tbody>*/
 .-td{display: table-cell; vertical-align: middle;} /* <td>*/
 
-@media only screen and (max-width:45em) { 
-    .-mTable td , :not(._col-3) .td {display: block;}
-    .hide-tbl-thead-s{ display: none;}
-}
-
-
-
-html body .hide { display: none;}
-.vMid > ._vitems { @extend .dIB; vertical-align: middle;}
+.vMid > ._ { @extend .dIB; vertical-align: middle;}
 
 .visible {visibility: visible;}
 .hidden {visibility: hidden;}

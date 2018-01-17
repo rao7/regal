@@ -1,63 +1,52 @@
+
 /*========= REGAL GRID=======*/
 
-*:focus {outline:0;}
-// grid
-
+@import '_global';
+    
 *{ -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
     box-sizing: border-box;
+    
+    // resets
+    
+    &:focus { outline:0;}
+    margin:0;
+    padding:0;        
 }
 
-$width: 98%;
-$gutter: 2%;
-$breakpoint-small: 33.75em; // 540px
-$breakpoint-med: 45em; // 720px
-$breakpoint-med2: 65em; // 1030px
-$breakpoint-large: 60em; // 960px
+$gutter: 2%; // gutter spacing
+$width: $_100 - $gutter; //98% the full size grid inside row
 
 .container {
-  width: 90%;
+  width: $_100 - 3% ; //95%
   margin-left: auto;
   margin-right: auto;
 
   
-  @media only screen and (min-width: $breakpoint-small) { 
-    width: 80%;
+  @media only screen  { 
+      
+     @media (min-width: $small) {width: $_100 - 5% ; } // 95% on tablet
+    @media (min-width: $large) { width: $_100 - 15% ;  } //85% on large screens
   }
-
-  @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-med2){ 
-    width: 98%;
-  }
-
-  @media only screen and (min-width: $breakpoint-large) {
-    width: 85%;
-    
-  }
-
-  @media (min-width: 1200px) { 
-    max-width: 75rem;
-   }
+  
 }
 
-.row , .fullCon , .clear{
-  position: relative;
-  width: 100%;
-}
+.row , .fullCon {  width: $_100; } // the 100% size 
 
-.row [class^="g-"]:not(.m0) {
+.row [class^="g-"]:not(.m0) { // margin set for grids
   margin: 0.5rem $gutter/2;
-  min-height: 0.125rem;
+
 }
 
-.row [class^="g-"]:not(.f-R){ float: left;}
+.row [class^="g-"]:not(.f-R):not(.f-N){ float: left;} // all grids are default float left inside row
 
-.row::after , .clear:after , .clear:before{
-  content: "";
-  display: table;
-  clear: both;
+.row , .clear { //clear and row settings 
+     &:after , &:before { content: ""; display: table;  clear: both;
+    }
 }
 
 
+//default grid size for mobile
 .g-1,
 .g-2,
 .g-3,
@@ -73,18 +62,40 @@ $breakpoint-large: 60em; // 960px
   width: $width;
 }
 
-@for $i from 1 through 12 {
+@for $i from 1 through 12 { // mobile specific grid append "-s"
   .g-#{$i}-s { width: ($width / (12/$i)) - ($gutter * (12 - $i) / 12); }
 }
 
-html body .hide-s { display: none;  }
-html body .hide-m { display: block; }
+html {
+   
+    
+    body .hide-s {display: none; }
+    .hide-m , .hide-l{ display: block; }
 
-@media only screen and (min-width: $breakpoint-med) {
+
+@media only screen and (min-width: $medium) and (max-width: $large) { // tablet specific grid append "-m"
+    
+  @for $i from 1 through 12 {
+     .g-#{$i}-m { width: ($width / (12/$i)) - ($gutter * (12 - $i) / 12); }
+  }
+
+ body { 
+    
+    .hide-s {display: block; }
+    .hide-m { display: none; }
+    }
+
+  }
+}
+
+@media only screen and (min-width: $medium) { // default grid for large devices
   @for $i from 1 through 12 {
     .g-#{$i} { width: ($width / (12/$i)) - ($gutter * (12 - $i) / 12); }
   }
 
-  html body .hide-s { display: block; }
-  html body .hide-m { display: none; }
+  html { 
+    
+    .hide-s , .hide-m{display: block; }
+    .hide , .hide-l{ display: none; }
+    }
 }
