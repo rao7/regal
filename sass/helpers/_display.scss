@@ -1,18 +1,18 @@
- /* Displays */
+ // Display properties definition goes here
 			
 .dB {display:block;}
 .dIB{ display:inline-block;}
 .dI{ display:inline;}
 .dFB{ display:flex-box;}
-.-table{ display:table;}/* <table>*/
-.-tr{display: table-row;} /* <tr>*/
-.-thead , .hide-tbl-thead-s{display:table-header-group;} /* <thead>*/
-.-tfoot{display:table-header-group;} /* <thead>*/
-.-tbody{display:table-row-group;} /* <tbody>*/
-.-td{display: table-cell; vertical-align: middle;} /* <td>*/
+.-table{ display:table;} // <table>
+.-tr{display: table-row;} // <tr>
+.-thead , .hide-tbl-thead-s{display:table-header-group;} // <thead>
+.-tfoot{display:table-header-group;} // <thead>
+.-tbody{display:table-row-group;} // <tbody>
+.-td{display: table-cell; vertical-align: middle;} // <td>
 
-.vMid > ._ { @extend .dIB; vertical-align: middle;}
+.vMid > ._lineIn { @extend .dIB; vertical-align: middle;}
 
-.visible {visibility: visible;}
-.hidden {visibility: hidden;}
-.ofH { overflow: hidden;}
+.view {visibility: visible;}
+.noView {visibility: hidden;}
+.flowHide { overflow: hidden;}

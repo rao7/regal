@@ -1,24 +1,6 @@
-/* REGAL SASS framework */
+/* Regal SASS Framework | Author Name : Rahul Rao | Author Url : rahulrao.in */
 
-// REGAL GRID - SCSS
+// REGAL GRID - "SIMPLE, SLEAK & SASSY"
 
 @import 'grid/_grid';
-
-@import 'helpers/_font';
-@import 'helpers/_utility';
-@import 'helpers/_alignment';
-@import 'helpers/_colors';
-@import 'helpers/_display';
-@import 'helpers/_form';
-
-
-
-//custom resets
-
-a , .clr-blu{ text-decoration: none; color:#1e88e5;}
-:not(button) > a:hover {text-decoration: underline; cursor:pointer;}
-ul:not(.disc) { list-style: none;}
-
-
-
-//custom css
+@import 'regalAddons'; // remove if you don't need our addon css classes and snippets. 

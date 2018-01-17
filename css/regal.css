@@ -1,5 +1,4 @@
-/* REGAL SASS framework */
-/*========= REGAL GRID=======*/
+/* Regal SASS Framework | Author Name : Rahul Rao | Author Url : rahulrao.in */
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; }
 *:focus { outline: 0; }
 
@@ -10,6 +9,12 @@
 .row, .fullCon { width: 100%; }
 
 .row [class^="g-"]:not(.m0) { margin: 0.5rem 1%; }
+
+.f-N { float: none; }
+
+.f-L { float: left; }
+
+.f-R { float: right; }
 
 .row [class^="g-"]:not(.f-R):not(.f-N) { float: left; }
 
@@ -72,14 +77,14 @@ html .hide-m, html .hide-l { display: block; }
   .g-12 { width: 98%; }
   html .hide-s, html .hide-m { display: block; }
   html .hide, html .hide-l { display: none; } }
-/* #1 FONT */
+/* px to rem mixin */
+/* eo px to rem mixin */
 :root { font-size: 16px; }
 @media only screen and (max-width: 33.75em) { :root { font-size: 12px; } }
-@media only screen and (max-width: 60em) { :root { font-size: 14px; } }
+@media only screen and (max-width: 64em) { :root { font-size: 14px; } }
 
 html, body { height: 100%; width: 100%; font-family: "Lato", Helvetica, sans-serif; line-height: 1.4; }
 
-/* -Weight(fw) */
 .fw-3 { font-weight: 300; }
 
 .fw-4 { font-weight: 400; }
@@ -90,37 +95,38 @@ html, body { height: 100%; width: 100%; font-family: "Lato", Helvetica, sans-ser
 
 .fw-7 { font-weight: 700; }
 
-/* -Size(fs) */
-.fs-10 { font-size: 0.625rem; }
+.fs-32, h1 { font-size: 2.2857142857rem; }
 
-.fs-12, h6 { font-size: 0.75rem; }
+.fs-30 { font-size: 2.1428571429rem; }
 
-.fs-13 { font-size: 0.8125rem; }
+.fs-28 { font-size: 2rem; }
 
-.fs-14 { font-size: 0.875rem; }
+.fs-26, h2 { font-size: 1.8571428571rem; }
 
-.fs-16, h5 { font-size: 1rem; }
+.fs-24, h3 { font-size: 1.7142857143rem; }
 
-.fs-18 { font-size: 1.125rem; }
+.fs-22 { font-size: 1.5714285714rem; }
 
-.fs-20, h4 { font-size: 1.25rem; }
+.fs-20, h4 { font-size: 1.4285714286rem; }
 
-.fs-22, h3 { font-size: 1.375rem; }
+.fs-18, h5 { font-size: 1.2857142857rem; }
 
-.fs-26, h2 { font-size: 1.625rem; }
+.fs-16 { font-size: 1.1428571429rem; }
 
-.fs-32, h1 { font-size: 2rem; }
+.fs-14 { font-size: 1rem; }
 
-/*  headings */
-/* px to rem mixin */
-/* eo px to rem mixin */
-/*utility*/
+.fs-12, h6 { font-size: 0.8571428571rem; }
+
+.fs-10 { font-size: 0.7142857143rem; }
+
 .uCase { text-transform: uppercase; }
 
 .camCase { text-transform: capitalize; }
 
 .lCase { text-transform: lowercase; }
 
+/* px to rem mixin */
+/* eo px to rem mixin */
 .hand { cursor: pointer; }
 
 .bdr:not(.bdr0) { border: 1px solid #e1e1e1; }
@@ -129,31 +135,17 @@ html, body { height: 100%; width: 100%; font-family: "Lato", Helvetica, sans-ser
 
 .bdr-B { border-width: 0 0 1px 0; border-color: #e1e1e1; border-style: solid; }
 
-.outline { outline: 1px solid #ddd; }
-
 .bdr0 { border: 0; }
 
-.bR3 { border-radius: 3px; }
+.bR3, .card { border-radius: 3px; }
 
 body .m0 { margin: 0; }
 body .m10 { margin: 0.7142857143rem; }
-body .mTB0 { margin-top: 0; margin-bottom: 0; }
 body .mTB10 { margin: 0.625rem 0; }
-body .mLR10 { margin: 0 0.625rem; }
-body .mT10 { margin-top: 0.625rem; }
-body .mB10 { margin-bottom: 0.625rem; }
-body .mT5 { margin-top: 0.3125rem; }
-body .mB5 { margin-bottom: 0.3125rem; }
 body .p0 { padding: 0; }
 body .pTB10 { padding: 0.625rem 0; }
-body .pLR10 { padding: 0 0.625rem; }
-body .pT10 { padding-top: 0.625rem; }
-body .pB10 { padding-bottom: 0.625rem; }
 body .pd10 { padding: 0.625rem; }
 body .pd5 { padding: 0.3125rem; }
-body .pd15 { padding: 1.0714285714rem; }
-body .pL0 { padding-left: 0; }
-body .pR0 { padding-right: 0; }
 
 ._z9 { z-index: 9; }
 
@@ -161,49 +153,28 @@ body .pR0 { padding-right: 0; }
 
 ._z999 { z-index: 999; }
 
-.-z1 { -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5); -ms-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5); box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5); }
+.-z1, .card { -webkit-box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.28); -ms-box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.28); -moz-box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.28); box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.28); }
 
-[class^="fab"].-z1 { -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.25); -ms-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.25); box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.25); }
+.-z2 { -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5); -ms-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5); box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5); }
 
-button.-z1 { -webkit-box-shadow: 0 3px 0.3rem rgba(0, 0, 0, 0.2); -ms-box-shadow: 0 3px 0.3rem rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 3px 0.3rem rgba(0, 0, 0, 0.2); box-shadow: 0 3px 0.3rem rgba(0, 0, 0, 0.2); transition: all 0.1s; }
-button.-z1:hover { -webkit-box-shadow: 0 4px 0.7rem rgba(0, 0, 0, 0.3); -ms-box-shadow: 0 4px 0.7rem rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 4px 0.7rem rgba(0, 0, 0, 0.3); box-shadow: 0 4px 0.7rem rgba(0, 0, 0, 0.3); }
+.-z3, btn.-z1:hover, btn.card:hover { -webkit-box-shadow: 0 4px 0.7rem rgba(0, 0, 0, 0.3); -ms-box-shadow: 0 4px 0.7rem rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 4px 0.7rem rgba(0, 0, 0, 0.3); box-shadow: 0 4px 0.7rem rgba(0, 0, 0, 0.3); }
 
-.-Yscroll-area { max-height: 7rem; overflow-y: auto; }
+btn.-z1, btn.card { -webkit-box-shadow: 0 3px 0.3rem rgba(0, 0, 0, 0.2); -ms-box-shadow: 0 3px 0.3rem rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 3px 0.3rem rgba(0, 0, 0, 0.2); box-shadow: 0 3px 0.3rem rgba(0, 0, 0, 0.2); transition: all 0.1s; }
+
+.-Yscroll-area { max-height: 3rem; overflow-y: auto; }
 
 .mH10 { min-height: 0.625rem; }
 
-button.btn-bg-blue { background-color: #4ca0ea; }
-button.gradBtn, button .gradBtn { background-image: -webkit-linear-gradient(45deg, #f60, #f99d31); background-image: -moz-linear-gradient(45deg, #f60, #f99d31); background-image: -o-linear-gradient(45deg, #f60, #f99d31); background-image: -ms-linear-gradient(45deg, #f60, #f99d31); background-image: linear-gradient(45deg, #f60, #f99d31); border-radius: 2px; }
-button.gradBtn:hover, button .gradBtn:hover { background-image: -webkit-linear-gradient(-45deg, #f60, #f99d31); background-image: -moz-linear-gradient(-45deg, #f60, #f99d31); background-image: -o-linear-gradient(-45deg, #f60, #f99d31); background-image: -ms-linear-gradient(-45deg, #f60, #f99d31); background-image: linear-gradient(-45deg, #f60, #f99d31); }
-
-.card { -webkit-box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.25); -ms-box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.25); box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.25); border-radius: 3px; }
-
-/*A tab & accordian utility with scss*/
-.-tabs + .-tabContent input[type="radio"]:checked + *, .-accordian input[type="radio"]:checked + *, .-accordian input[type="checkbox"]:checked + * { display: block; }
-
-.-tabs label:not(.active):not(.clr-p):not(:hover), .-Obar:not(.active):not(.clr-p):not(:hover) { color: #909090; }
-.-tabs label.active:after, .-tabs label:hover:after, .-Obar.active:after, .-Obar:hover:after { content: ""; width: 30%; border: 0.1rem solid #FF8F00; position: absolute; bottom: -1rem; left: 0; }
-
-/*A tab utility with scss*/
-/* Float */
-.f-N { float: none; }
-
-.f-L { float: left; }
-
-.f-R { float: right; }
-
-/* Positon */
 .p-S { position: static; }
 
 .p-R { position: relative; }
 
 .p-F { position: fixed; }
 
-.p-A { position: absolute; }
+.p-A, .oCheck input[type="radio"]:checked + label:after { position: absolute; }
 
 .p-I { position: inherit; }
 
-/* align set*/
 ._oT { top: 0; }
 
 ._oR { right: 0; }
@@ -212,7 +183,6 @@ button.gradBtn:hover, button .gradBtn:hover { background-image: -webkit-linear-g
 
 ._oB { bottom: 0; }
 
-/* text orientations */
 ._L { text-align: left; }
 
 ._R { text-align: right; }
@@ -225,40 +195,31 @@ body { color: #434343; background-color: #f3f5f7; }
 
 .bg-f { background-color: #fff; }
 
+.bg-0 { background-color: #000; }
+
 .bg-Lgry { background-color: #f3f5f7; }
 
-.bg-gry { background-color: #808080; }
-
-.bg-blue { background-color: rgba(0, 153, 255, 0.99); }
-
-.bg-green { background-color: #009769; }
-
-.bg-navy-blue { background-color: #528a9e; }
+.bg-attr { background-color: attr(data-BgColor); }
 
 .clr-p { color: #434343; }
 
-.clr-p2 { color: #808080; }
+.clr-p2 { color: #f3f5f7; }
 
 .clr-s { color: #f3f5f7; }
 
 .clr-f { color: #fff; }
 
-.clr-0 { color: #434343; }
+.clr-0 { color: #000; }
 
-.clr-red { color: #d6140b; }
+.clr-red { color: red; }
 
-.clr-grn { color: #009769; }
+.clr-grn { color: green; }
 
-.clr-info { color: #FF8F00; }
+.clr-info { color: orange; }
 
-.clr-orange { color: #f99d31; }
-
-.clr-blue { color: rgba(0, 153, 255, 0.99); }
-
-/* Displays */
 .dB { display: block; }
 
-.dIB, .vMid > ._ { display: inline-block; }
+.dIB, .vMid > ._lineIn, .oCheck input[type="radio"] + label:before { display: inline-block; }
 
 .dI { display: inline; }
 
@@ -266,43 +227,35 @@ body { color: #434343; background-color: #f3f5f7; }
 
 .-table { display: table; }
 
-/* <table>*/
 .-tr { display: table-row; }
 
-/* <tr>*/
 .-thead, .hide-tbl-thead-s { display: table-header-group; }
 
-/* <thead>*/
 .-tfoot { display: table-header-group; }
 
-/* <thead>*/
 .-tbody { display: table-row-group; }
 
-/* <tbody>*/
 .-td { display: table-cell; vertical-align: middle; }
 
-/* <td>*/
-.vMid > ._ { vertical-align: middle; }
+.vMid > ._lineIn { vertical-align: middle; }
 
-.visible { visibility: visible; }
+.view { visibility: visible; }
 
-.hidden { visibility: hidden; }
+.noView { visibility: hidden; }
 
-.ofH { overflow: hidden; }
+.flowHide { overflow: hidden; }
 
-.pb-cbox input[type="radio"] + label:before { content: ""; border: 1px solid #555; padding: 8px; border-radius: 10px; display: inline-block; vertical-align: top; margin-right: 13px; }
+/* px to rem mixin */
+/* eo px to rem mixin */
+button.gradBtn, button .gradBtn { background-image: -webkit-linear-gradient(45deg, #f60, #f99d31); background-image: -moz-linear-gradient(45deg, #f60, #f99d31); background-image: -o-linear-gradient(45deg, #f60, #f99d31); background-image: -ms-linear-gradient(45deg, #f60, #f99d31); background-image: linear-gradient(45deg, #f60, #f99d31); border-radius: 4px; }
+button.gradBtn:hover, button .gradBtn:hover { background-image: -webkit-linear-gradient(-45deg, #f60, #f99d31); background-image: -moz-linear-gradient(-45deg, #f60, #f99d31); background-image: -o-linear-gradient(-45deg, #f60, #f99d31); background-image: -ms-linear-gradient(-45deg, #f60, #f99d31); background-image: linear-gradient(-45deg, #f60, #f99d31); }
 
-.pb-cbox input[type="radio"]:checked + label:after { content: ""; background-color: #0059a7; padding: 5px; border-radius: 10px; position: absolute; left: 9px; top: 5px; }
+.-tabs + .-tabContent input[type="radio"]:checked + *, .-accordian input[type="radio"]:checked + *, .-accordian input[type="checkbox"]:checked + * { display: block; }
 
-.pb-cbox.hK input[type="radio"]:checked + label:after { left: 14px; top: 13px; }
-@media screen and (max-width: 45em) { .pb-cbox.hK input[type="radio"]:checked + label:after { left: 11px; top: 10px; } }
-@media screen and (min-width: 45em) and (max-width: 65em) { .pb-cbox.hK input[type="radio"]:checked + label:after { left: 12px; top: 12px; } }
+.-tabs label:not(.active):not(.clr-p):not(:hover), .-Obar:not(.active):not(.clr-p):not(:hover) { color: #909090; }
+.-tabs label.active:after, .-tabs label:hover:after, .-Obar.active:after, .-Obar:hover:after { content: ""; width: 30%; border: 0.1rem solid #FF8F00; position: absolute; bottom: -1rem; left: 0; }
 
-input[type=checkbox] { width: 16px; height: 16px; position: relative; cursor: pointer; background: url(https://static.paisabazaar.com/components/images/radio-check-icon.png) no-repeat; border: 0; -webkit-appearance: none; }
-input[type=checkbox]:checked { background-position: 0 -26px; }
+.oCheck input[type="radio"] + label:before { content: ""; border: 1px solid #222; padding: 8px; border-radius: 10px; vertical-align: top; margin-right: 13px; }
 
-a, .clr-blu { text-decoration: none; color: #1e88e5; }
-
-:not(button) > a:hover { text-decoration: underline; cursor: pointer; }
-
-ul:not(.disc) { list-style: none; }
+.oCheck input[type="radio"]:checked + label:after { content: ""; background-color: #0059a7; padding: 5px; border-radius: 10px; left: 9px; top: 5px; }
+@media screen and (min-width: 45em) and (max-width: 65em) { .oCheck input[type="radio"]:checked + label:after { left: 12px; top: 12px; } }

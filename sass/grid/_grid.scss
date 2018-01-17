@@ -1,5 +1,5 @@
 
-/*========= REGAL GRID=======*/
+//The Regal Grid
 
 @import '_global';
     
@@ -38,6 +38,12 @@ $width: $_100 - $gutter; //98% the full size grid inside row
 
 }
 
+// Float classes
+	
+.f-N {float:none;}
+.f-L {float:left;}
+.f-R {float:right;} 
+
 .row [class^="g-"]:not(.f-R):not(.f-N){ float: left;} // all grids are default float left inside row
 
 .row , .clear { //clear and row settings 
@@ -63,7 +69,7 @@ $width: $_100 - $gutter; //98% the full size grid inside row
 }
 
 @for $i from 1 through 12 { // mobile specific grid append "-s"
-  .g-#{$i}-s { width: ($width / (12/$i)) - ($gutter * (12 - $i) / 12); }
+  .g-#{$i}-s { width: ($width / (12/$i)) - ($gutter * (12 - $i) / 12); } // .g-1-s to .g-12-s
 }
 
 html {
@@ -76,7 +82,7 @@ html {
 @media only screen and (min-width: $medium) and (max-width: $large) { // tablet specific grid append "-m"
     
   @for $i from 1 through 12 {
-     .g-#{$i}-m { width: ($width / (12/$i)) - ($gutter * (12 - $i) / 12); }
+     .g-#{$i}-m { width: ($width / (12/$i)) - ($gutter * (12 - $i) / 12); } // .g-1-m to .g-12-m
   }
 
  body { 
@@ -90,7 +96,7 @@ html {
 
 @media only screen and (min-width: $medium) { // default grid for large devices
   @for $i from 1 through 12 {
-    .g-#{$i} { width: ($width / (12/$i)) - ($gutter * (12 - $i) / 12); }
+    .g-#{$i} { width: ($width / (12/$i)) - ($gutter * (12 - $i) / 12); } // .g-1 to .g-12
   }
 
   html { 

@@ -1,0 +1,10 @@
+@import '../mixins/_mixins';
+button{
+
+    &.gradBtn , .gradBtn {
+        @include linearGrad(45deg,#f60,#f99d31); 
+        border-radius: 4px;
+
+        &:hover {@include linearGrad(-45deg,#f60,#f99d31);}
+    }
+}

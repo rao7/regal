@@ -1,0 +1,19 @@
+// A tab & accordian utility with scss
+
+.-tabs + .-tabContent input[type="radio"]:checked + * ,
+.-accordian input[type="radio"]:checked + * ,
+.-accordian input[type="checkbox"]:checked + * { display: block;}
+.-tabs label , .-Obar{
+    &:not(.active):not(.clr-p):not(:hover){
+        color:#909090;
+    }
+    &.active:after , &:hover:after{
+        content: "";
+        width:30%;
+        border:0.1rem solid #FF8F00;
+        position: absolute;
+        bottom:-1rem;
+        left:0;
+    }
+}
+
