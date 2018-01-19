@@ -10,7 +10,7 @@
 .-tfoot{display:table-header-group;} // <thead>
 .-tbody{display:table-row-group;} // <tbody>
 .-td{display: table-cell; vertical-align: middle;} // <td>
-
+.-vTop {vertical-align: top;}
 .vMid > ._lineIn { @extend .dIB; vertical-align: middle;}
 
 .view {visibility: visible;}

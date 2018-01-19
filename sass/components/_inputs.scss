@@ -1,6 +1,20 @@
 input {// input to be get styles
-    
-    :focus {
-        
+    @extend .bdr0; 
+    &:focus + .uLine{
+        @extend .p-R;
+        @extend .dB;
+        &:after {@extend %underline;}
     }
+}
+
+%underline{
+    content:"";
+    @extend .p-A;
+    
+    @extend ._oB;
+    @extend ._oL;
+    width:$_100 - 1;
+    padding:1px;
+    background-color: $secondary;
+    
 }

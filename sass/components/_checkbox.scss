@@ -1,26 +1,58 @@
 // radio button style
-.oCheck input[type="radio"] + label:before {
-    content: "";
-    border: 1px solid #222;
+
+
+%shared {  content: "";  border-radius: 10px;  }
+%uncheck {
+    @extend %shared;
+    border: 1px solid $ternary;
     padding: 8px;
-    border-radius: 10px;
     @extend .dIB;
     vertical-align: top;
-    margin-right: 13px;
+    margin-right: 13px; 
 }
 
-.oCheck input[type="radio"]:checked + label:after {
-       content: "";
-    background-color: #0059a7;
-    padding: 5px;
-    border-radius: 10px;
-    @extend .p-A;
-    left: 9px;
-    top: 5px;
+.cBox , .rBox { 
+    label { @extend .p-R;}
+    input[type="radio"] { // radio  buttons
     
-    @media screen and (min-width:45em) and (max-width:65em){
-    left: 12px;
-    top: 12px;
+    @extend .hide;
+    
+    & + label:before { @extend %uncheck; }
+    
+    &:checked + label:after {
+    @extend %shared;
+    background-color: $secondary;
+    padding: 5px;
+    @extend .p-A;
+    left: 4px;
+    top: 2px;
+    
+   @media screen and (max-width:45em){ top: 3px;}
+
+    }
+        
+  }
+    
+       input[type="checkbox"] { // checkboxes
+        
+    @extend .hide;
+    
+    & + label:before { @extend %uncheck; border-radius: 0; }
+    
+    &:checked + label:after {
+    @extend %shared;
+    transform: rotateZ(-45deg);
+    width: 14px;
+    height: 4px;
+    border: 2px solid;
+    border-color: transparent transparent $secondary $secondary;
+    @extend .p-A;
+    left: 4px;
+    top: -1px;
+
+    }
+        
+  }
+    
 }
 
-}

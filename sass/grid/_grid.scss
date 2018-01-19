@@ -14,7 +14,7 @@
     padding:0;        
 }
 
-$gutter: 2%; // gutter spacing
+$gutter: 2%; // gutter spacing around grid
 $width: $_100 - $gutter; //98% the full size grid inside row
 
 .container {
@@ -47,6 +47,7 @@ $width: $_100 - $gutter; //98% the full size grid inside row
 .row [class^="g-"]:not(.f-R):not(.f-N){ float: left;} // all grids are default float left inside row
 
 .row , .clear { //clear and row settings 
+        position: relative;
      &:after , &:before { content: ""; display: table;  clear: both;
     }
 }
@@ -75,7 +76,7 @@ $width: $_100 - $gutter; //98% the full size grid inside row
 html {
    
     
-    body .hide-s {display: none; }
+    body .hide-s , .hide {display: none; }
     .hide-m , .hide-l{ display: block; }
 
 
@@ -102,6 +103,6 @@ html {
   html { 
     
     .hide-s , .hide-m{display: block; }
-    .hide , .hide-l{ display: none; }
+    .hide-l{ display: none; }
     }
 }

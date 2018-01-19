@@ -5,15 +5,15 @@
 .-accordian input[type="checkbox"]:checked + * { display: block;}
 .-tabs label , .-Obar{
     &:not(.active):not(.clr-p):not(:hover){
-        color:#909090;
+        @extend .clr-s;
     }
     &.active:after , &:hover:after{
         content: "";
         width:30%;
-        border:0.1rem solid #FF8F00;
-        position: absolute;
+        border:0.1rem solid $info;
+        @extend .p-A;
         bottom:-1rem;
-        left:0;
+        @extend ._oL;
     }
 }
 

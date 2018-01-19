@@ -21,7 +21,7 @@ body {
 .m0 {margin:0;}
 .m10 {margin:rem(10);}
 .mTB10 {margin:0.625rem 0;}
-
+.m0A {margin:0 auto;}
 
 .p0 {padding:0;}
 .pTB10 {padding:0.625rem 0;}
@@ -37,21 +37,16 @@ body {
 ._z999 {z-index: 999;}
 
 
-.-z1 {@include shadow (0, 0, 0.1rem, rgba(0,0,0,0.28));  }
-.-z2 {@include shadow (0, 0, 1rem, rgba(0,0,0,0.5));  }
-.-z3 {@include shadow (0, 4px, 0.7rem, rgba(0,0,0,0.3));  }
-
-btn.-z1 { @include shadow (0,3px,0.3rem, rgba(0, 0, 0, 0.2)); 
-            transition: all 0.1s;
-            &:hover{ @extend .-z3; }
-}
+.-z1 {@include shadow (0, 2px, 0.2rem, rgba(0,0,0,0.25));  }
+.-z2 {@include shadow (0, 0.2rem, 0.7rem, rgba(0,0,0,0.28));  }
+.-z3 {@include shadow (0, 0.3rem, 0.8rem, rgba(0,0,0,0.38));  }
 
 
 .-Yscroll-area { max-height: 3rem; overflow-y: auto;}
 
 .mH10 { min-height: 0.625rem;}
 
-.card { @extend .-z1;  @extend .bR3;}
+.card { @extend .-z1;  @extend .bR3; }
 
 
 

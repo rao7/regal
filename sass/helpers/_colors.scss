@@ -1,18 +1,18 @@
 @import '../grid/_global';
 
 // color definition goes here
-
-body { color: $primary; background-color: $secondary;}
 .bg-f { background-color: $white;}
 .bg-0 { background-color:$black ;}
-.bg-Lgry{ background-color:$secondary ;}
-.bg-attr { background-color: attr(data-BgColor);}
+.bg-Lgry{ background-color:$base ;}
 
 .clr-p { color:$primary; }
-.clr-p2 { color:$secondary; }
 .clr-s { color:$secondary;}
+.clr-t { color:$ternary;}
+.clr-b { color:$base;}
 .clr-f { color:$white; }
 .clr-0 { color:$black; }
 .clr-red { color:$error; }
 .clr-grn { color:$ok; }
 .clr-info {color:$info;}
+
+body { @extend .clr-t; @extend .bg-Lgry; }
