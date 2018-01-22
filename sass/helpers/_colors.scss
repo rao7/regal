@@ -3,7 +3,13 @@
 // color definition goes here
 .bg-f { background-color: $white;}
 .bg-0 { background-color:$black ;}
-.bg-Lgry{ background-color:$base ;}
+.bg-b { background-color:$base ;}
+.bg-p { background-color:$primary; }
+.bg-s { background-color:$secondary;}
+.bg-t { background-color:$ternary;}
+.bg-red { background-color:$error; }
+.bg-grn { background-color:$ok; }
+.bg-info {background-color:$info;}
 
 .clr-p { color:$primary; }
 .clr-s { color:$secondary;}
@@ -15,4 +21,4 @@
 .clr-grn { color:$ok; }
 .clr-info {color:$info;}
 
-body { @extend .clr-t; @extend .bg-Lgry; }
+body { @extend .clr-t; @extend .bg-b; }

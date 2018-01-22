@@ -1,19 +1,33 @@
 // A tab & accordian utility with scss
 
 .-tabs + .-tabContent input[type="radio"]:checked + * ,
+input[type="checkbox"].z-pop:checked + .popUP,
 .-accordian input[type="radio"]:checked + * ,
 .-accordian input[type="checkbox"]:checked + * { display: block;}
-.-tabs label , .-Obar{
+.-tabs label , .-bar{
     &:not(.active):not(.clr-p):not(:hover){
         @extend .clr-s;
     }
     &.active:after , &:hover:after{
         content: "";
-        width:30%;
+        width:100%;
         border:0.1rem solid $info;
         @extend .p-A;
-        bottom:-1rem;
+        @extend ._oB;
         @extend ._oL;
     }
 }
 
+
+//popUp
+
+.popUP {
+    
+    height:$_100;
+    background-color: rgba(0,0,0,0.85);
+    .popCon {
+        .--x { top:-0.7rem;}
+        top:10vh;
+        min-height: 4rem;
+    }
+}

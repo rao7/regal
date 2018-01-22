@@ -1,4 +1,5 @@
-@import '../mixins/_mixins.scss';
+@import '../grid/_global';
+@import '../mixins/_mixins';
 
 // addon individual reusable classes. 
 
@@ -7,9 +8,9 @@
 
 // border definitions 
 
-.bdr:not(.bdr0) { border:1px solid #e1e1e1; }
-.bdr.error { border:1px solid #d6140b; }
-.bdr-B { @include bdr(0,0,1px,0,#e1e1e1,solid);}
+.bdr:not(.bdr0) { border:1px solid $base; }
+.bdr.error { border:1px solid $error; }
+.bdr-B { @include bdr(0,0,1px,0,$base,solid);}
 
 .bdr0 { border:0;}
 .bR3 { border-radius:3px; }

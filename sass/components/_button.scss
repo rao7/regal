@@ -19,11 +19,11 @@ button{
     @extend .hand;
      &:hover{ @extend .-z3; }
     }
-    &.ok { background-color: $ok; @extend .clr-f;}
-    &.error { background-color: $error; @extend .clr-f;}
-    &.info { background-color: $info; @extend .clr-f;}
-    &.--p { background-color: $primary; @extend .clr-f; }
-    &.--s {background-color:$secondary; @extend .clr-f;}
-    &.--t {background-color:$ternary; @extend .clr-f;}
+    &.ok { @extend .bg-grn; @extend .clr-f;}
+    &.error { @extend .bg-red; @extend .clr-f;}
+    &.info { @extend .bg-info; @extend .clr-f;}
+    &.--p { @extend .bg-p; @extend .clr-f; }
+    &.--s {@extend .bg-s; @extend .clr-f;}
+    &.--t {@extend .bg-t; @extend .clr-f;}
 
 }
