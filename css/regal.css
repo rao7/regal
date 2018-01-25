@@ -77,7 +77,7 @@ html .hide-m, html .hide-l { display: block; }
   .g-11 { width: 89.6666666667%; }
   .g-12 { width: 98%; }
   html .hide-s, html .hide-m { display: block; }
-  html .hide-l { display: none; } }
+  html body .hide-l { display: none; } }
 /* px to rem mixin */
 /* eo px to rem mixin */
 :root { font-size: 16px; }
@@ -282,3 +282,5 @@ input:focus + .uLine:after { content: ""; width: 99%; padding: 1px; background-c
 @media screen and (max-width: 45em) { .cBox input[type="radio"]:checked + label:after, .rBox input[type="radio"]:checked + label:after { top: 3px; } }
 .cBox input[type="checkbox"] + label:before, .rBox input[type="checkbox"] + label:before { border-radius: 0; }
 .cBox input[type="checkbox"]:checked + label:after, .rBox input[type="checkbox"]:checked + label:after { transform: rotateZ(-45deg); width: 14px; height: 4px; border: 2px solid; border-color: transparent transparent #f50057 #f50057; left: 4px; top: -1px; }
+
+/*# sourceMappingURL=regal.css.map */
