@@ -3,10 +3,11 @@
 .dB {display:block;}
 .dIB{ display:inline-block;}
 .dI{ display:inline;}
-.dFB{ display:flex-box;}
+.dF{ display:flex;}
+.dIF{ display:inline-flex;}
 .-table{ display:table;} // <table>
 .-tr{display: table-row;} // <tr>
-.-thead , .hide-tbl-thead-s{display:table-header-group;} // <thead>
+.-th , .hide-tbl-thead-s{display:table-header-group;} // <thead>
 .-tfoot{display:table-header-group;} // <thead>
 .-tbody{display:table-row-group;} // <tbody>
 .-td{display: table-cell; vertical-align: middle;} // <td>
