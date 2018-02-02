@@ -10,7 +10,6 @@ It is responsive to all the three media breakpoints ie. mobile , tablet and larg
 The syntax for the grid system is easy and abbreviated and has 12 grids in it.
 
   `<div class="container">`
-    
     `<div class="row">`
     
         `<div class="g-2"></div>`
