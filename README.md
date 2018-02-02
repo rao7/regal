@@ -28,7 +28,7 @@ The syntax for the grid system is easy and abbreviated and has 12 grids in it.
 1. Numbered
 2. List
 
-**Bold** and _Italic_ and `Code` text
+**Bold** and _Italic_ and `lorem ipsum lora lassun <hr/>` text
 
 [Link](url) and ![Image](src)
 
