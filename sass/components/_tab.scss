@@ -1,23 +1,39 @@
+@import '../grid/_global';
 // A tab & accordian utility with scss
 
+%pseudo { content:""; @extend .p-A; }
 .-tabs + .-tabContent input[type="radio"]:checked + * ,
 input[type="checkbox"].z-pop:checked + .popUP,
 .-accordian input[type="radio"]:checked + * ,
-.-accordian input[type="checkbox"]:checked + * { display: block;}
+.-accordian input[type="checkbox"]:checked + * { display: block; }
 .-tabs label , .-bar{
     &:not(.active):not(.clr-p):not(:hover){
         @extend .clr-s;
     }
     &.active:after , &:hover:after{
-        content: "";
-        width:100%;
+        width:$_100;
         border:0.1rem solid $info;
-        @extend .p-A;
+        @extend %pseudo;
         @extend ._oB;
         @extend ._oL;
     }
 }
 
+
+.-accordian {
+    label {
+        &:after {
+            @extend %pseudo ;
+            border:1px solid;
+            border-color:transparent  $ternary $ternary transparent;
+            padding: 5px;
+            right:0.5rem;
+            top:1rem;
+            transform: rotate(45deg);
+            
+        }
+    }
+}
 
 //popUp
 
@@ -31,3 +47,21 @@ input[type="checkbox"].z-pop:checked + .popUP,
         min-height: 4rem;
     }
 }
+
+//tooltip
+
+//[data-tip] {@extend .p-R; @extend .hand;
+//&:hover:before {
+  //  content: attr(data-tip);
+   // @extend .p-A;
+   // @extend .card;
+   // @extend .clr-f;
+   // @extend .bg-info;
+   // bottom:2rem;
+   // right:0;
+    //font-size:0.8rem;
+    //padding:0.5rem;
+    //display: inline-table;
+   // }
+    
+//}

@@ -34,7 +34,7 @@ $width: $_100 - $gutter; //98% the full size grid inside row
 .row , .fullCon {  width: $_100; } // the 100% size 
 
 .row [class^="g-"]:not([class*="m_"]) { // margin set for grids
-  margin: 0.5rem $gutter/2;
+  margin: 0.625rem $gutter/2;
 
 }
 

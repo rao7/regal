@@ -8,7 +8,7 @@
 
 .row, .fullCon { width: 100%; }
 
-.row [class^="g-"]:not([class*="m_"]) { margin: 0.5rem 1%; }
+.row [class^="g-"]:not([class*="m_"]) { margin: 0.625rem 1%; }
 
 .f-N { float: none; }
 
@@ -78,6 +78,23 @@ html .hide-m, html .hide-l { display: block; }
   .g-12 { width: 98%; }
   html .hide-s, html .hide-m { display: block; }
   html body .hide-l { display: none; } }
+/* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126 License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
 /* px to rem mixin */
 /* eo px to rem mixin */
 :root { font-size: 16px; }
@@ -92,7 +109,7 @@ html, body { height: 100%; width: 100%; font-family: "Lato", Helvetica, sans-ser
 
 .fw-5 { font-weight: 500; }
 
-.fw-6 { font-weight: 600; }
+.fw-6, b { font-weight: 600; }
 
 .fw-7 { font-weight: 700; }
 
@@ -170,7 +187,7 @@ body .p_10 { padding: 0.625rem; }
 
 .p-F { position: fixed; }
 
-.p-A, input:focus + .uLine:after, .-tabs label.active:after, .-tabs label:hover:after, .-bar.active:after, .-bar:hover:after, .cBox input[type="radio"]:checked + label:after, .rBox input[type="radio"]:checked + label:after, .cBox input[type="checkbox"]:checked + label:after, .rBox input[type="checkbox"]:checked + label:after { position: absolute; }
+.p-A, input:focus + .uLine:after, .-tabs label.active:after, .-tabs label:hover:after, .-bar.active:after, .-bar:hover:after, .-accordian label:after, .cBox input[type="radio"]:checked + label:after, .rBox input[type="radio"]:checked + label:after, .cBox input[type="checkbox"]:checked + label:after, .rBox input[type="checkbox"]:checked + label:after { position: absolute; }
 
 .p-I { position: inherit; }
 
@@ -267,9 +284,13 @@ button.gradBtn:hover, button.btn.prime:hover { background-image: -webkit-linear-
 
 input:focus + .uLine:after { content: ""; width: 99%; padding: 1px; background-color: #f50057; }
 
+.-tabs label.active:after, .-tabs label:hover:after, .-bar.active:after, .-bar:hover:after, .-accordian label:after { content: ""; }
+
 .-tabs + .-tabContent input[type="radio"]:checked + *, input[type="checkbox"].z-pop:checked + .popUP, .-accordian input[type="radio"]:checked + *, .-accordian input[type="checkbox"]:checked + * { display: block; }
 
-.-tabs label.active:after, .-tabs label:hover:after, .-bar.active:after, .-bar:hover:after { content: ""; width: 100%; border: 0.1rem solid #f57c00; }
+.-tabs label.active:after, .-tabs label:hover:after, .-bar.active:after, .-bar:hover:after { width: 100%; border: 0.1rem solid #f57c00; }
+
+.-accordian label:after { border: 1px solid; border-color: transparent #263238 #263238 transparent; padding: 5px; right: 0.5rem; top: 1rem; transform: rotate(45deg); }
 
 .popUP { height: 100%; background-color: rgba(0, 0, 0, 0.85); }
 .popUP .popCon { top: 10vh; min-height: 4rem; }
