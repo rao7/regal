@@ -1,19 +1,26 @@
-## Welcome to GitHub Pages
+# Regal CSS
+### A Lightweight and Reusable framework for your scartch web projects
 
-You can use the [editor on GitHub](https://github.com/rao7/regal/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Regal CSS comes with responsive grids and built in CSS snippets and abbreviated classes.
+The grid system of Regal is made over mobile first approach, and is browser responsive and adaptive.
+It is responsive to all the three media breakpoints ie. mobile , tablet and larger devices like laptops.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The syntax for the grid system is easy and abbreviated and has 12 grids in it.
 
-```markdown
-Syntax highlighted code block
+`Code`
+<div class="container">
+<div class="row">
+    <div class="g-2"></div>
+    <div class="g-10"></div>
+</div>
+</div>
+`Code`
 
-# Header 1
-## Header 2
-### Header 3
+
+
+
 
 - Bulleted
 - List
@@ -24,14 +31,4 @@ Syntax highlighted code block
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/rao7/regal/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
