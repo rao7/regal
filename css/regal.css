@@ -109,9 +109,9 @@ html, body { height: 100%; width: 100%; font-family: "Lato", Helvetica, sans-ser
 
 .fw-5 { font-weight: 500; }
 
-.fw-6, b { font-weight: 600; }
+.fw-6, b, .b { font-weight: 600; }
 
-.fw-7 { font-weight: 700; }
+.fw-7, .b2 { font-weight: 700; }
 
 .fs-32, h1 { font-size: 2.2857142857rem; }
 
@@ -187,7 +187,7 @@ body .p_10 { padding: 0.625rem; }
 
 .p-F { position: fixed; }
 
-.p-A, input:focus + .uLine:after, .-tabs label.active:after, .-tabs label:hover:after, .-bar.active:after, .-bar:hover:after, .-accordian label:after, .cBox input[type="radio"]:checked + label:after, .rBox input[type="radio"]:checked + label:after, .cBox input[type="checkbox"]:checked + label:after, .rBox input[type="checkbox"]:checked + label:after { position: absolute; }
+.p-A, input:focus + .uLine:after, .-tabs label.active:after, .-tabs label:hover:after, .-bar.active:after, .-bar:hover:after, .-accordian > input + label:after, .cBox input[type="radio"]:checked + label:after, .rBox input[type="radio"]:checked + label:after, .cBox input[type="checkbox"]:checked + label:after, .rBox input[type="checkbox"]:checked + label:after { position: absolute; }
 
 .p-I { position: inherit; }
 
@@ -284,13 +284,14 @@ button.gradBtn:hover, button.btn.prime:hover { background-image: -webkit-linear-
 
 input:focus + .uLine:after { content: ""; width: 99%; padding: 1px; background-color: #f50057; }
 
-.-tabs label.active:after, .-tabs label:hover:after, .-bar.active:after, .-bar:hover:after, .-accordian label:after { content: ""; }
+.-tabs label.active:after, .-tabs label:hover:after, .-bar.active:after, .-bar:hover:after, .-accordian > input + label:after { content: ""; }
 
-.-tabs + .-tabContent input[type="radio"]:checked + *, input[type="checkbox"].z-pop:checked + .popUP, .-accordian input[type="radio"]:checked + *, .-accordian input[type="checkbox"]:checked + * { display: block; }
+.-tabs + .-tabContent input[type="radio"]:checked + *, input[type="checkbox"].z-pop:checked + .popUP, .-accordian > input[type="radio"]:checked + label + .-accTxt, .-accordian > input[type="checkbox"]:checked + label + .-accTxt { display: block; }
 
 .-tabs label.active:after, .-tabs label:hover:after, .-bar.active:after, .-bar:hover:after { width: 100%; border: 0.1rem solid #f57c00; }
 
-.-accordian label:after { border: 1px solid; border-color: transparent #263238 #263238 transparent; padding: 5px; right: 0.5rem; top: 1rem; transform: rotate(45deg); }
+.-accordian > input + label:after { border: 1px solid; border-color: transparent #263238 #263238 transparent; padding: 5px; right: 0.5rem; top: 1rem; transform: rotate(45deg); transition: all 0.2s ease-out; }
+.-accordian > input[type="radio"]:checked + label:after, .-accordian input[type="checkbox"]:checked + label:after { transform: rotate(-135deg); }
 
 .popUP { height: 100%; background-color: rgba(0, 0, 0, 0.85); }
 .popUP .popCon { top: 10vh; min-height: 4rem; }
@@ -300,7 +301,7 @@ input:focus + .uLine:after { content: ""; width: 99%; padding: 1px; background-c
 
 .cBox input[type="radio"] + label:before, .rBox input[type="radio"] + label:before, .cBox input[type="checkbox"] + label:before, .rBox input[type="checkbox"] + label:before { border: 1px solid #263238; padding: 8px; vertical-align: top; margin-right: 13px; }
 
-.cBox input[type="radio"]:checked + label:after, .rBox input[type="radio"]:checked + label:after { background-color: #f50057; padding: 5px; left: 4px; top: 2px; }
+.cBox input[type="radio"]:checked + label:after, .rBox input[type="radio"]:checked + label:after { background-color: #f50057; padding: 5px; left: 4px; top: 2px; transition: all 0.4s ease-out; }
 @media screen and (max-width: 45em) { .cBox input[type="radio"]:checked + label:after, .rBox input[type="radio"]:checked + label:after { top: 3px; } }
 .cBox input[type="checkbox"] + label:before, .rBox input[type="checkbox"] + label:before { border-radius: 0; }
 .cBox input[type="checkbox"]:checked + label:after, .rBox input[type="checkbox"]:checked + label:after { transform: rotateZ(-45deg); width: 14px; height: 4px; border: 2px solid; border-color: transparent transparent #f50057 #f50057; left: 4px; top: -1px; }
