@@ -14,9 +14,16 @@ The syntax for the grid system is easy and abbreviated and has 12 grids in it.
   
     <div class="row"> // row to hold the grids
     
-        <div class="g-2">2/12</div> //grid of size 2 /12
+        <div class="g-2 "></div> //grid of size 2 /12
         
-        <div class="g-10">10/12</div> // grid of size 10 /12
+        <div class="g-10"></div> // grid of size 10 /12
+        
+    </div>
+    <div class="row"> // row to hold the grids
+    
+        <div class="g-2 g-4-s g-6-m"></div> // append "-s" for different size grid on mobile.
+        
+        <div class="g-10 g-8-s g-6-m"></div> // append "-m" for different size grid on tablet. 
         
     </div>
     
@@ -24,16 +31,24 @@ The syntax for the grid system is easy and abbreviated and has 12 grids in it.
 
 
 
+## Regal Features
 
 
+- Simple and Lightweight grid with minimal possible CSS **abbreviated classes**.  
+- **Mobile first** responsive approach with **mobile , tablet & large** devices media grids classes
+- Easy to bootstrap your web projects and easy to migrate other framework projects to Regal CSS .
+- Coupled with **helper classes , snippets & components** which provide basic CSS coding needs.
+- Made over SCSS which provides project scalability and better control on your css code.
+- Built in **reset css** for handling cross browser inconsistencies. 
 
-- Bulleted
-- List
+## Documentation
 
-1. Numbered
-2. List
+[Documentation for Regal](https://rao7.github.io/regal/)
 
-**Bold** and _Italic_ and `lorem ipsum lora lassun <hr/>` text
 
-[Link](url) and ![Image](src)
+## License
+
+
+[Regal CSS is MIT Licensed](https://opensource.org/licenses/MIT)
+Author : [Rahul Rao](http://rahulrao.in)
 
