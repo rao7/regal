@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Regal CSS - A SCSS based framework for quick bootstraping frontend Development.</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ 
+ <link rel="stylesheet" href="css/regal.css">
+ <style>
+     .snippets.hlpr .card{min-height: 20vw;}
+     a:not(:hover){text-decoration: none;}
+ </style>
+ 
+ 
+</head>
+<body>
+ 
+ <div id="app" class="wrapper">
+     <header class="mainHdr bdr mH10 _C">
+         <hgroup class="m_tb_10 p_10">
+            <svg class="p-R" version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="100pt" height="100pt" viewBox="0 0 354.000000 290.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,290.000000) scale(0.100000,-0.100000)"
+fill="#9c27b0" stroke="none">
+<path d="M1739 2838 c-61 -120 -85 -221 -68 -282 11 -39 70 -96 100 -96 31 0
+74 29 94 63 24 40 22 114 -4 187 -24 69 -78 190 -85 190 -3 0 -20 -28 -37 -62z"/>
+<path d="M1565 2485 c-37 -36 -32 -69 16 -116 45 -44 80 -113 104 -204 23 -88
+19 -95 -21 -35 -68 105 -173 190 -235 190 -34 0 -59 -29 -59 -68 0 -33 7 -39
+91 -91 45 -28 125 -132 149 -195 9 -25 2 -20 -52 29 -244 227 -562 149 -722
+-177 -25 -51 -52 -118 -60 -148 l-15 -55 0 70 c-1 54 5 82 24 123 18 38 22 59
+16 75 -22 58 -82 62 -118 8 -30 -44 -43 -93 -43 -161 l0 -56 -68 66 c-98 97
+-191 122 -208 56 -9 -39 5 -66 44 -84 41 -18 115 -72 109 -79 -3 -2 -29 6 -58
+17 -77 31 -171 37 -244 16 -46 -14 -69 -29 -116 -75 -49 -49 -61 -69 -79 -130
+-20 -63 -22 -88 -17 -194 8 -181 41 -282 146 -440 93 -142 126 -210 145 -300
+8 -36 17 -71 21 -77 17 -28 57 -30 183 -11 812 125 1727 127 2521 5 204 -31
+200 -33 240 102 30 101 61 165 130 269 49 72 113 217 137 308 8 31 14 102 14
+174 0 158 -18 214 -99 295 -45 45 -68 59 -115 73 -75 22 -163 15 -246 -18 -55
+-23 -59 -23 -49 -5 5 10 33 31 61 46 73 39 90 57 86 95 -8 81 -104 62 -210
+-43 l-68 -66 0 56 c0 68 -13 117 -43 161 -30 45 -80 48 -110 7 l-20 -27 26
+-59 c21 -45 27 -75 27 -123 l-1 -64 -23 70 c-38 117 -94 213 -171 291 -148
+150 -309 179 -490 90 -40 -20 -93 -57 -122 -87 -29 -29 -53 -49 -53 -44 0 18
+67 130 101 169 21 24 59 53 83 65 47 22 66 45 66 80 0 27 -34 61 -62 61 -65 0
+-173 -91 -241 -202 -29 -47 -37 -56 -32 -33 36 166 62 228 116 281 42 41 51
+83 25 119 -36 50 -118 3 -179 -104 l-30 -53 -20 38 c-30 58 -65 101 -102 124
+-42 26 -51 25 -80 -5z m-215 -540 c59 -21 133 -77 175 -134 19 -27 35 -51 35
+-55 0 -3 -12 -6 -27 -6 -40 0 -109 -37 -142 -77 -74 -89 -56 -227 36 -284 49
+-30 101 -40 147 -28 40 11 91 56 99 87 2 9 3 -3 0 -28 -2 -25 -11 -62 -20 -83
+-19 -43 -7 -85 27 -94 11 -3 20 -12 20 -19 0 -19 1 -19 -65 21 -69 41 -105 49
+-193 43 -146 -11 -242 -110 -242 -249 1 -138 155 -263 282 -229 88 24 123 76
+81 122 -21 23 -44 23 -87 -3 -31 -18 -40 -19 -70 -9 -39 13 -83 58 -92 96 -4
+14 1 44 10 69 23 60 71 89 146 90 68 0 119 -24 157 -73 40 -52 37 -99 -9 -194
+-121 -243 -331 -297 -509 -131 -116 108 -205 313 -214 493 -7 134 25 210 90
+210 41 0 71 -23 85 -65 15 -44 8 -65 -41 -121 -56 -65 -71 -100 -77 -175 -5
+-74 6 -106 42 -115 40 -10 66 11 66 54 0 64 19 110 69 167 80 92 89 175 27
+277 -41 68 -96 98 -179 98 l-59 0 6 28 c4 15 24 63 46 107 88 180 235 261 380
+210z m1035 -9 c72 -34 149 -120 196 -220 52 -112 52 -116 -15 -116 -68 0 -102
+-12 -145 -53 -46 -44 -71 -101 -71 -165 0 -66 16 -104 68 -163 49 -55 62 -85
+62 -141 0 -75 58 -104 100 -50 19 23 21 35 16 84 -8 76 -28 122 -76 175 -51
+55 -62 81 -49 127 16 57 77 84 128 56 30 -16 51 -83 51 -165 0 -243 -137 -511
+-304 -597 -57 -29 -141 -34 -207 -13 -75 25 -162 114 -213 218 -48 98 -50 134
+-9 184 45 56 88 78 153 77 66 0 113 -23 140 -67 39 -64 14 -149 -54 -181 -44
+-21 -52 -20 -93 5 -39 24 -77 20 -93 -11 -16 -30 -3 -58 41 -87 101 -67 255
+-7 315 122 28 59 30 93 9 163 -20 68 -86 134 -156 157 -99 33 -217 13 -306
+-51 -21 -15 -23 -15 -23 -1 0 9 9 19 20 22 28 9 34 45 16 99 -9 26 -16 59 -16
+74 l1 27 16 -26 c40 -65 135 -81 214 -38 139 77 125 276 -25 348 -23 12 -57
+21 -75 21 l-32 0 30 43 c100 145 257 204 386 143z m-767 -333 c23 -14 39 -45
+49 -97 l6 -29 -21 21 c-29 29 -55 28 -88 -3 -24 -22 -29 -23 -58 -11 -64 26
+-54 100 17 131 34 15 58 12 95 -12z m435 -14 c41 -44 32 -88 -22 -107 -25 -9
+-32 -7 -52 14 -28 30 -62 31 -91 2 l-21 -21 6 32 c11 56 31 85 67 104 44 22
+77 15 113 -24z m-1654 -75 l52 -15 -39 -29 c-42 -30 -72 -89 -72 -140 0 -52
+38 -136 79 -173 21 -19 70 -46 109 -61 52 -20 81 -39 111 -71 23 -25 41 -48
+41 -53 0 -5 12 -14 26 -21 22 -10 31 -9 50 4 36 24 31 64 -15 123 -49 61 -78
+83 -160 116 -78 31 -109 58 -117 102 -7 41 7 68 45 84 27 11 35 9 74 -13 24
+-14 56 -44 70 -66 15 -23 32 -41 38 -41 19 0 97 -183 115 -269 26 -132 8 -249
+-49 -309 -132 -142 -410 16 -548 312 -102 219 -85 447 40 513 52 27 79 28 150
+7z m2888 -3 c81 -37 117 -126 111 -270 -8 -171 -79 -328 -209 -466 -139 -146
+-294 -189 -382 -107 -101 94 -102 315 -4 509 38 75 137 187 180 202 57 21 103
+-17 94 -80 -7 -54 -24 -71 -110 -104 -146 -58 -257 -213 -174 -244 34 -13 56
+-2 87 45 36 52 68 75 139 100 117 41 189 145 179 256 -6 55 -28 92 -77 125
+l-32 22 48 15 c65 20 100 19 150 -3z"/>
+<path d="M464 2087 c-3 -9 -4 -64 -2 -122 3 -106 3 -107 36 -136 39 -35 83
+-38 112 -7 46 49 15 130 -89 232 -41 40 -51 46 -57 33z"/>
+<path d="M3004 2038 c-34 -35 -68 -77 -77 -95 -54 -103 32 -188 115 -114 30
+27 32 32 36 117 2 49 0 104 -5 122 l-8 34 -61 -64z"/>
+<path d="M1295 478 c-87 -5 -161 -11 -163 -13 -3 -2 9 -18 26 -34 18 -16 36
+-41 42 -55 15 -39 12 -99 -5 -122 -8 -10 -15 -22 -15 -26 0 -8 481 1 489 9 3
+2 -4 10 -16 18 -27 19 -53 75 -53 116 0 18 11 52 25 76 l26 43 -98 -1 c-54 -1
+-170 -6 -258 -11z"/>
+<path d="M1918 465 c50 -63 46 -144 -9 -201 l-33 -34 100 0 c56 0 170 -3 255
+-6 153 -7 154 -7 137 13 -45 50 -34 137 22 192 l39 38 -77 6 c-42 4 -162 10
+-266 13 l-190 7 22 -28z"/>
+<path d="M1735 451 c-36 -15 -59 -50 -58 -87 1 -43 25 -71 73 -85 64 -19 130
+27 130 92 0 63 -79 106 -145 80z"/>
+<path d="M2650 444 c0 -3 9 -17 20 -31 13 -17 20 -41 20 -70 0 -49 -11 -75
+-47 -115 l-25 -26 53 -6 c302 -33 425 -44 431 -38 10 11 78 192 78 208 0 8 -3
+14 -7 14 -5 0 -48 7 -98 15 -77 12 -215 30 -382 50 -24 2 -43 2 -43 -1z"/>
+<path d="M735 428 c-210 -28 -340 -49 -347 -56 -8 -8 55 -188 72 -206 5 -5 74
+-2 162 7 84 9 188 19 231 23 l78 6 -24 27 c-36 39 -47 65 -47 114 0 30 7 53
+21 71 l20 26 -48 -1 c-26 -1 -79 -6 -118 -11z"/>
+<path d="M973 401 c-64 -39 -47 -133 29 -158 115 -38 187 88 88 155 -40 27
+-75 28 -117 3z"/>
+<path d="M2462 401 c-30 -20 -52 -55 -52 -86 0 -23 48 -72 76 -78 40 -7 91 10
+114 40 65 83 -45 182 -138 124z"/>
+<path d="M1255 164 c-486 -28 -746 -52 -767 -72 -24 -20 -23 -55 2 -77 22 -20
+39 -20 400 10 575 46 1230 46 1800 -1 102 -8 228 -18 281 -21 96 -6 97 -6 114
+20 19 29 13 62 -13 76 -19 9 -147 23 -442 47 -140 12 -354 17 -755 19 -308 1
+-587 1 -620 -1z"/>
+</g>
+</svg>
+
+             <h1 class="title p_10 clr-p fw-4 uCase">regal CSS</h1>
+             <h5 class="clr-t fw-4">A SCSS based scalable and lightweight CSS framework with Grids and abbreviated reusable classes </h5>
+         </hgroup>
+     </header>
+     
+     <main class="container mH10 bdr m_A">
+             <div class="row _C"><!--grids-->
+                 <div class="clear card g-11 g-12-m m_A mH10 bg-f p_10 fs-14 ">
+                     <div class="g-2 p_10 bg-b">g-2</div>
+                     <div class="g-2 p_10 bg-b">g-2</div>
+                     <div class="g-2 p_10 bg-b"> g-2</div>
+                     <div class="g-2 p_10 bg-b"> g-2</div>
+                     <div class="g-2 p_10 bg-b"> g-2</div>
+                     <div class="g-2 p_10 bg-b"> g-2</div>
+                     <div class="g-3 p_10 bg-b">g-3</div>
+                     <div class="g-3 p_10 bg-b">g-3</div>
+                     <div class="g-3 p_10 bg-b">g-3</div>
+                     <div class="g-3 p_10 bg-b">g-3</div>
+                     <div class="g-4 p_10 bg-b">g-4</div>
+                     <div class="g-4 p_10 bg-b">g-4</div>
+                     <div class="g-4 p_10 bg-b">g-4</div>
+                      <div class="g-6 p_10 bg-b">g-6</div>
+                     <div class="g-6 p_10 bg-b">g-6</div>
+                     <div class="g-5 p_10 bg-b">g-5</div>
+                     <div class="g-7 p_10 bg-b">g-7</div>
+                     <div class="g-1 p_10 bg-b">g-1</div>
+                     <div class="g-11 p_10 bg-b">g-11</div>
+                     <div class="g-12 p_10 bg-b">g-12</div>
+                 </div>
+                 
+             </div><!--grids-->
+             
+             <section class="row m_tb_10 _C">
+                 <h3 class=" fw-4 _C camCase p_tb_10 clr-t">form elements</h3>
+                 <!-- button , inputs , radio button , checkbox -->
+                 
+                 <article class="card bg-f mH10 g-11 g-12-m m_A p_10">
+                     <h4 class="camCase clr-s">buttons</h4>
+                     <p></p>
+                     <p class="m_tb_10">
+                         <button class="btn bdr0 p_10 m_tb_10">Submit</button>
+                          <button class="btn bdr0 p_10 m_tb_10 ok">success</button>
+                           <button class="btn bdr0 p_10 m_tb_10 error">error state</button>
+                            <button class="btn bdr0 p_10 m_tb_10 info">information</button>
+                            <button class="btn bdr0 p_10 m_tb_10 --p">primary</button>
+                          <button class="btn bdr0 p_10 ok m_tb_10 --s">secondary</button>
+                           <button class="btn bdr0 p_10 error m_tb_10 --t">ternory</button>
+                            <button class="btn bdr0 p_10 m_tb_10 bg-0 clr-f">black</button>
+                            
+                     </p>
+                      <p class="row">
+                         <button class="btn bdr0 p_10 m_tb_10 --p g-2 ">primary</button>
+                          <button class="btn bdr0 p_10 m_tb_10 --s g-2 g-3-s">secondary</button>
+                           <button class="btn bdr0 p_10 m_tb_10 --t g-3 g-5-s ">ternory</button>
+                            <button class="btn bdr0 p_10 m_tb_10 bg-0 clr-f g-4-s ">black</button>
+                     </p>
+                     <br/>
+                     <h4 class="camCase clr-s m_tb_10">input types</h4>
+                     <div class="m_tb_10 row ">
+                        <p class="g-4 rBox">
+                        
+                        <b class="fs-16 camCase dB p_10 clr-b fw-4">radio buttons</b>
+                        <span class="p_10 dB">
+                         <input type="radio" name="say" id="yes" value="yes"/>
+                         <label for="yes" class="camCase fw-5 m10">say yes</label>
+                         <input type="radio" name="say" id="no" value="no"/>
+                         <label for="no" class="camCase fw-5 m10">say no</label>
+                         </span>
+                         </p>
+                         <p class="g-4 cBox">
+                           
+                            <b class="fs-16 camCase dB p_10 clr-b fw-4">checkboxes</b>
+                            <span class="p_10 dB">
+                          <input type="checkbox" name="say" id="opt1" value="option 1"/>
+                         <label for="opt1" class="camCase fw-5 m10">option 1</label>
+                         <input type="checkbox" name="say" id="opt2" value="option 2"/>
+                         <label for="opt2" class="camCase fw-5 m10">option 2</label>
+                         </span>
+                         </p>
+                         <p class="g-4 ">
+                         <span class="bdr-B dB">
+                         <b class="fs-16 camCase dB p_10 clr-b fw-4">text box</b>
+                       <input type="text" placeholder="Enter some text here" class="m0 p_tb_10 fullCon"/>
+                       <i class="uLine"></i>
+                       </span>
+                       </p>
+                     </div>
+                    
+                    
+                    
+                 </article>
+             </section>
+             
+             <section class="snippets m_tb_10 row">
+                 <h3 class="clr-t _C fw-4 m_tb_10">snippets(tabs, accordian, popup)</h3>
+                 <article class="card bg-f mH10 g-11 g-12-m m_A p_10">
+                  <div class="row">
+                   
+                   
+                   <div class="g-5 tabCon">
+                      <p class="fs-18 _C"> Tabs</p>
+                       <div class="-tabs row camCase _C">
+                           <label for="_1" class="g-3 p-R m0 m_tb_10 g-3-s hand p_10">tab 1</label>
+                           <label for="_2"  class="g-3 p-R m0  m_tb_10 g-3-s hand p_10">tab 2</label>
+                           <label for="_3"  class="g-3 p-R m0  m_tb_10 g-3-s hand p_10">tab 3</label>
+                       </div>
+                       <div class="-tabContent">
+                           <input type="radio" name="tab" id="_1" class="hide" checked/>
+                           <p class="mH10 bdr hide p_10">
+                               tab 1 content goes here
+                           </p>
+                           <input type="radio" name="tab" id="_2" class="hide"/>
+                           <p class="mH10 bdr hide p_10">
+                               tab 2 content goes here
+                           </p>
+                           <input type="radio" name="tab" id="_3" class="hide"/>
+                           <p class="mH10 bdr hide p_10">
+                               tab 3 content goes here
+                           </p>
+                       </div>
+                   </div>
+                   
+                     <div class="g-5 accCon">
+                      <p class="fs-18 _C"> Accordian</p>
+                   
+                       <div class="-accordian camCase">
+                         <input type="radio" name="acc" id="_11" class="hide" />
+                          <label for="_11" class="dB bdr-B p-R m0 hand p_10">accordian  1</label>
+                           
+                           <p class="-accTxt mH10 card hide p_10">
+                               accordian 1 content goes here
+                           </p>
+                           <input type="radio" name="acc" id="_21" class="hide"/>
+                           <label for="_21" class="dB bdr-B p-R m0 hand p_10">accordian  2</label>
+                           
+                           <p class="-accTxt mH10 card bdr hide p_10">
+                               accordian 2 content goes here
+                           </p>
+                           <input type="radio" name="acc" id="_31" class="hide"/>
+                           <label for="_31" class="dB bdr-B p-R m0 hand p_10">accordian  3</label>
+                           
+                           <p class="-accTxt mH10 card bdr hide p_10">
+                               accordian 3 content goes here
+                           </p>
+                       </div>
+                   </div>
+                   
+                   <div class="g-2 popCon">
+                      <p class="fs-18 _C" > Pop Up</p>
+                      <br/>
+                       <label for="pop1" class="btn --s clr-f p_10 bdr0">trigger popUp</label>
+                       <input type="checkbox" name="pop" id="pop1" class="z-pop hide"/>
+                       <section class="popUP p-F _oL _oT bg-b fullCon _C _z999 hide">
+                               <div class="popCon card g-7 g-8-m m_A p-R bg-f p_10 _L">
+                                   <label for="pop1" class="p-A clr-t fs-30 _oR --x pd5 hand _z99">&times;</label>
+                                   
+                                   <div class="popUP-txt row p_10 _J">
+                                       <article>
+                                           <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, officia facilis. Nihil, quis cum ipsam quas ea sequi sint nam magnam, rem labore fuga dicta perferendis corporis qui sapiente delectus!</div>
+                                           <div>Cum id ratione eaque itaque quidem temporibus, ea molestiae recusandae, unde nisi quod earum voluptatem alias veritatis reiciendis quibusdam impedit, saepe! Iure praesentium neque ipsa quos delectus. Aliquam, maxime facere!</div>
+                                           <div>Nobis deleniti magni voluptates quam quo, et, debitis, adipisci beatae consequuntur, nemo tempore iste commodi! Atque id vel explicabo laboriosam, rem nulla, quasi sapiente nobis, natus veritatis illo. Delectus, consectetur!</div>
+                                           <div>Culpa aut unde laboriosam aspernatur accusantium eaque quaerat minima pariatur non omnis! Reiciendis iure id perspiciatis unde nam. Ut et temporibus quae repellendus odio officiis qui voluptatibus aspernatur facilis. Eveniet!</div>
+                                           <div>Consequatur aut odio iste cumque voluptates animi optio ad, autem, adipisci amet rerum nemo, cum fuga tempore. Placeat fugiat perferendis, voluptas quo quam molestiae pariatur velit consequatur sint ipsa, nostrum?</div>
+                                           <div>Neque aperiam saepe harum, nihil temporibus. Maiores delectus, quis, beatae dignissimos animi nihil. Expedita eius eos odio provident, blanditiis dolorem quibusdam rerum aliquid consequuntur, adipisci non tenetur consequatur accusantium. Praesentium.</div>
+                                       </article>
+                                   </div>
+                               </div>
+                               
+                               
+                         </section><br/><br/>
+                       <!--  <span class="clr-0 m_10 pd10 dB" data-tip="this is poup click here hkasd ajdhasd">this is tooltip</span>-->
+                   </div>
+                   
+                   </div>
+                 </article>
+             </section>
+              <section class="snippets hlpr m_tb_10 row">
+                 <h3 class="clr-t _C fw-4 m_tb_10">the helper classes</h3>
+                 <article class="row mH10 g-11 g-12-m m_A ">
+                   
+                   <div class="g-4 card bg-f mH10 p_tb_10 ">
+                       <h6 class="_C uCase f-N">Floats</h6>
+                       
+                           <span class="p_10 f-L bg-b g-7  m_tb_10">
+                               float: left <b>(.f-L)</b>
+                           </span>
+                           <span class="p_10 f-R bg-b g-7 m_tb_10">
+                               float: right <b>(.f-R)</b>
+                           </span>
+                           
+                       <p class="p_10 clear m_tb_10">
+                               <span class="bg-b p_10 dB">clear: both <b>(.clear)</b></span>
+                           </p>
+                       
+                       <span class="p_10 f-N bg-b m_tb_10">
+                               float: none <b>(.f-N)</b>
+                           </span>
+                       
+                       
+                   </div>
+                   
+                    <div class="g-4 card bg-f mH10 p_tb_10">
+                           <h6 class="_C uCase f-N">text alignments</h6>
+                       <p class=" p_10">
+                           <span class="p_10 _L bg-b g-12 dB m_tb_10">
+                               text-align: left <b>(._L)</b>
+                           </span>
+                           <span class="p_10 _R bg-b g-12  dB m_tb_10">
+                               text-align: right <b>(._R)</b>
+                           </span>
+                            <span class="p_10 _C bg-b g-12  dB m_tb_10">
+                               text-align: center <b>(._C)</b>
+                           </span>
+                           <span class="p_10 _J bg-b g-12  dB m_tb_10">
+                               text-align: justify <b>(._J)</b>
+                           </span>
+                       </p>
+                      
+                    </div>
+                    
+                    <div class="g-4 card bg-f mH10 p_tb_10">
+                           <h6 class="_C uCase f-N">positions</h6>
+                       <p class="row p_10">
+                           <span class="g-12 p_10 bg-b dB ">
+                               relative <b>(.p-R)</b>
+                           </span>
+                           <span class="g-6 p_10 bg-b dB ">
+                              absolute <b>(.p-A)</b>
+                           </span>
+                            <span class="g-6 p_10 bg-b dB ">
+                              fixed <b>(.p-F)</b>
+                           </span>
+                           
+                           <span class="g-6 p_10 bg-b dB">
+                               top: 0 <b>(._oT)</b>
+                           </span>
+                           <span class="g-6 p_10 bg-b dB">
+                               left: 0 <b>(._oL)</b>
+                           </span>
+                           <span class="g-6 p_10 bg-b  dB">
+                               right: 0 <b>(._oR)</b>
+                           </span>
+                          <span class="g-6 p_10 bg-b dB">
+                               bottom: 0 <b>(._oB)</b>
+                           </span>
+                       </p>
+                      
+                    </div>
+                    
+                     <div class="g-4 card bg-f mH10 p_tb_10">
+                           <h6 class="_C uCase f-N">margin</h6>
+                           <span class="g-10 p_10 bg-b m_0 dB">
+                               margin: 0 <b>(.m_0)</b>
+                           </span>
+                           <span class="g-10 p_10 bg-b m_10 dB">
+                               margin: 10px <b>(.m_10)</b>
+                           </span>
+                            <span class="g-10 p_10 bg-b m_tb_10 dB">
+                               margin: 10px 0 <b>(.m_tb_10)</b>
+                           </span>
+                           <span class="clear"></span>
+                           <span class=" p_10 bg-b m_A dB g-10">
+                               margin: 0 auto <b>(.m_0)</b>
+                           </span>
+                           
+                     </div>
+                     
+                     <div class="g-4 card bg-f mH10 p_tb_10">
+                           <h6 class="_C uCase f-N">padding</h6>
+                            <span class="g-10 bg-b p_0 dB">
+                               padding: 0 <b>(.p_0)</b>
+                           </span>
+                           <span class="g-10 bg-b p_10 dB">
+                               padding: 10px <b>(.p_10)</b>
+                           </span>
+                            <span class="g-10 bg-b p_tb_10 dB">
+                               padding: 10px 0 <b>(.p_tb_10)</b>
+                           </span>
+                           <span class="clear"></span>
+                          
+                     </div>
+                     <div class="g-4 card bg-f mH10 p_tb_10">
+                           <h6 class="_C uCase f-N">z-index</h6>
+                           <span class="g-10 bg-b p_10 dB">
+                               z-index: 9; <b>(._z9 )</b>
+                           </span>
+                           <span class="g-10 bg-b p_10 dB">
+                               z-index: 99; <b>(._z99 )</b>
+                           </span>
+                           <span class="g-10 bg-b p_10 dB">
+                               z-index: 999; <b>(._z999 )</b>
+                           </span>
+                         
+                           
+                          
+                     </div>
+                     
+                        <div class="g-4 card bg-f mH10 p_tb_10">
+                           <h6 class="_C uCase f-N">box shadow </h6>
+                          <br/>
+                           <span class="m_A g-10 bg-b p_10 dB -z1">
+                               box shadow <b>(.-z1 )</b>
+                           </span><br/>
+                           <span class="m_A g-10 bg-b p_10 dB -z2">
+                               box shadow <b>(.-z2 )</b>
+                           </span><br/>
+                           <span class="m_A g-10 bg-b p_10 dB -z3">
+                               box shadow <b>(.-z3 )</b>
+                           </span>
+                           
+                          
+                     </div>
+                     
+                      <div class="g-4 card bg-f mH10 p_tb_10">
+                           <h6 class="_C uCase f-N">display </h6>
+                          
+                         
+                            <span class="g-6 bg-b p_10 dB">
+                               block <b>(.dB )</b>
+                           </span>
+                           <span class="g-6 bg-b p_10 dB">
+                               inline-block <b>(.dIB )</b>
+                           </span>
+                           <span class="g-6 bg-b p_10 dB">
+                               inline <b>(.dI )</b>
+                           </span>
+                           <span class="g-6 bg-b p_10 dB">
+                               flex <b>(.dF )</b>
+                           </span>
+                           <span class="g-6 bg-b p_10 dB">
+                               inline-flex <b>(.dIF )</b>
+                           </span>
+                          
+                          <span class="g-6 bg-b p_10 dB">
+                                overflow: hidden <b>(.flowHide )</b>
+                           </span>
+                           <span class="g-6 bg-b p_10 dB">
+                               visible <b>(.view )</b>
+                           </span>
+                           <span class="g-6 bg-b p_10 dB">
+                               hidden <b>(.noView )</b>
+                           </span>
+                     </div>
+                     
+                     <div class="g-4 card bg-f mH10 p_tb_10">
+                           <h6 class="_C uCase f-N">table </h6>
+                          
+                         
+                            <span class="g-6 bg-b p_tb_10 dB">
+                                <xmp class="dI"><table/></xmp> <b>(.-table )</b>
+                           </span>
+                           <span class="g-6 bg-b p_10 dB">
+                               <xmp class="dI"><th></xmp> <b>(.-th )</b>
+                           </span>
+                           <span class="g-6 bg-b p_10 dB">
+                               <xmp class="dI"><tr></xmp> <b>(.-tr )</b>
+                           </span>
+                           <span class="g-6 bg-b p_10 dB">
+                              <xmp class="dI"> <td></xmp> <b>(.-td )</b>
+                           </span>
+                           <span class="g-6 bg-b p_tb_10 dB">
+                              <xmp class="dI"> <tbody></xmp> <b>(.-tbody )</b>
+                           </span>
+                          
+                          <span class="g-6 bg-b p_tb_10 dB">
+                              <xmp class="dI"> <tfoot></xmp> <b>(.-tfoot )</b>
+                           </span>
+                          
+                     </div>
+                     
+                 </article>
+             </section>
+             
+              <section class="snippets m_tb_10 row">
+                 <h3 class="clr-t _C fw-4 m_tb_10">Typography</h3>
+                 <article class="card bg-f mH10 g-11 g-12-m m_A p_10 row">
+                  <div class="g-3">
+                   <h1>heading 1</h1>
+                   <h2>heading 2</h2>
+                   <h3>heading 3</h3>
+                   <h4>heading 4</h4>
+                   <h5>heading 5</h5>
+                   <h6>heading 6</h6>
+                   </div>
+                   <div class="g-3">
+                     <p class="fs-18 fw-6 clr-s">Default font sizes</p>
+                       <span class="fs-10">10px</span>,
+                   
+                       <span class="fs-12">12px</span>,
+                    
+                       <span class="fs-14"> 14px</span>,
+                    
+                       <span class="fs-16">16px</span>,
+                  
+                       <span class="fs-18">18px</span>,
+                      
+                       <span class="fs-20">20px</span>,
+                      
+                       <span class="fs-22">22px</span>,
+                     
+                       <span class="fs-24">24px</span>,
+                   
+                       <span class="fs-26">26px</span>,
+                      
+                       <span class="fs-28">28px</span>,
+                      
+                       <span class="fs-30">30px</span>,
+                   </div>
+                   
+                   <div class="g-3 fs-20">
+                       <p class=" clr-s fw-6">font weight</p>
+                       <span class="fw-3">lighter</span>,
+                   
+                       <span class="fw-4">light</span>,
+                    
+                       <span class="fw-5"> normal</span>,
+                    
+                       <span class="fw-6">bold</span>,
+                  
+                       <span class="fw-7">bolder</span>,
+                      
+                      
+                       
+                   </div>
+                    <div class="g-3 fs-20">
+                       <p class="clr-s fw-6">text helpers</p>
+                       
+                     
+                    <span class="lCase">Lowercase</span>,
+                       <span class="camCase">camelcase</span>,
+                      <span class="uCase">uppercase</span>
+                    
+                      
+                      
+                       
+                   </div>
+                 </article>
+             </section>
+     </main>
+     <br/>
+     <footer class="mainFtr mH10 bg-t row p_10">
+         <span class="g-4 clr-b _C p_10">Made with <b class="clr-s">&hearts;</b> and <xmp class="dI"><code> </code></xmp> by  <a href="http://rahulrao.in" class="clr-s ">Rahul Rao</a> </span>
+         <span class="g-4 _C p_10">
+             <a href="https://opensource.org/licenses/MIT" target="_blank" class="clr-b">Open source &amp; MIT License</a>
+         </span>
+         <span class="g-4 _C p_10">
+             <a href="https://github.com/rao7/regal" class="clr-b camCase">contribute to Regal CSS</a>
+         </span>
+     </footer>
+ </div>
+</body>
+</html>
