@@ -3,9 +3,7 @@
 
 %pseudo { content:""; @extend .p-A; }
 .-tabs + .-tabContent input[type="radio"]:checked + * ,
-input[type="checkbox"].z-pop:checked + .popUP,
-.-accordian > input[type="radio"]:checked + label + .-accTxt ,
-.-accordian  > input[type="checkbox"]:checked + label + .-accTxt { display: block; }
+input[type="checkbox"].z-pop:checked + .popUP { display: block; }
 .-tabs label , .-bar{
     &:not(.active):not(.clr-p):not(:hover){
         @extend .clr-s;
@@ -20,9 +18,12 @@ input[type="checkbox"].z-pop:checked + .popUP,
 }
 
 
+
 .-accordian {
-    & > input + label {
-        &:after {
+    & > input {
+        &:not(:checked) + label + .-accTxt { @extend .p_0; height: 0; @extend .flowHide;
+            transition: all 0.2s ease-out; }
+        & + label:after {
             @extend %pseudo ;
             border:1px solid;
             border-color:transparent  $ternary $ternary transparent;
@@ -35,9 +36,10 @@ input[type="checkbox"].z-pop:checked + .popUP,
        
     }
     
-     & > input[type="radio"]:checked + label:after , 
-            input[type="checkbox"]:checked + label:after {
-                transform: rotate(-135deg);
+     & > input[type="radio"]:checked + label , 
+            input[type="checkbox"]:checked + label {
+                & + .-accTxt { height: auto; overflow: auto; min-height: 3rem;  }
+                &:after {transform: rotate(-135deg);}
             
         }
 }

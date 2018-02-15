@@ -2,13 +2,30 @@
 <html lang="en">
 <head>
  <meta charset="UTF-8">
- <title>Regal CSS - A SCSS based framework for quick bootstraping frontend Development.</title>
- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <title>Regal CSS - An SCSS based CSS framework for quick bootstraping frontend Development.</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+ <meta name="keywords" content="regal CSS , lightweight CSS framework , CSS grid only , CSS framework , SCSS framework , SCSS responsive grid system , responsive grid system, regal SCSS" />
  
- <link rel="stylesheet" href="css/regal.css">
+ <meta  name="description" content="Regal CSS is a SCSS based CSS framework for quick bootstraping frontend Development , it has lightweight responsive grid system built over abbreviated reusable classes. "/>
+ <meta name="author" content="Rahul Rao" />
+ <link rel="stylesheet" href="css/regal.css" />
  <style>
      .snippets.hlpr .card{min-height: 20vw;}
      a:not(:hover){text-decoration: none;}
+     
+     .mainHdr:before {
+         content: "";
+         position: absolute;
+         width:100%;
+         height:25rem;
+         background-color:#9c27b0 ;
+         z-index:0;
+         left:0;
+         top:0;
+         
+     }
+     .mainHdr hgroup {opacity:0.8;}
+     
  </style>
  
  
@@ -17,13 +34,13 @@
  
  <div id="app" class="wrapper">
      <header class="mainHdr bdr mH10 _C">
-         <hgroup class="m_tb_10 p_10">
+         <hgroup class="m_tb_10 p_10 p-R">
             <svg class="p-R" version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="100pt" height="100pt" viewBox="0 0 354.000000 290.000000"
- preserveAspectRatio="xMidYMid meet">
+ preserveAspectRatio="xMidYMid meet" style="top:1rem;">
 
 <g transform="translate(0.000000,290.000000) scale(0.100000,-0.100000)"
-fill="#9c27b0" stroke="none">
+fill="#fff" stroke="none">
 <path d="M1739 2838 c-61 -120 -85 -221 -68 -282 11 -39 70 -96 100 -96 31 0
 74 29 94 63 24 40 22 114 -4 187 -24 69 -78 190 -85 190 -3 0 -20 -28 -37 -62z"/>
 <path d="M1565 2485 c-37 -36 -32 -69 16 -116 45 -44 80 -113 104 -204 23 -88
@@ -110,34 +127,70 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
 </g>
 </svg>
 
-             <h1 class="title p_10 clr-p fw-4 uCase">regal CSS</h1>
-             <h5 class="clr-t fw-4">A SCSS based scalable and lightweight CSS framework with Grids and abbreviated reusable classes </h5>
+             <h1 class="title p_10 clr-f fw-4 uCase ">regal CSS</h1>
+             <h5 class="clr-f fw-5 g-9 g-12-m m_A">An SCSS based scalable and lightweight mobile first CSS library for quick bootstraping frontend development bundled with Grids , Snippets and abbreviated reusable classes. </h5>
          </hgroup>
      </header>
      
      <main class="container mH10 bdr m_A">
+            <br/>
              <div class="row _C"><!--grids-->
+                
                  <div class="clear card g-11 g-12-m m_A mH10 bg-f p_10 fs-14 ">
-                     <div class="g-2 p_10 bg-b">g-2</div>
-                     <div class="g-2 p_10 bg-b">g-2</div>
-                     <div class="g-2 p_10 bg-b"> g-2</div>
-                     <div class="g-2 p_10 bg-b"> g-2</div>
-                     <div class="g-2 p_10 bg-b"> g-2</div>
-                     <div class="g-2 p_10 bg-b"> g-2</div>
-                     <div class="g-3 p_10 bg-b">g-3</div>
-                     <div class="g-3 p_10 bg-b">g-3</div>
-                     <div class="g-3 p_10 bg-b">g-3</div>
-                     <div class="g-3 p_10 bg-b">g-3</div>
-                     <div class="g-4 p_10 bg-b">g-4</div>
-                     <div class="g-4 p_10 bg-b">g-4</div>
-                     <div class="g-4 p_10 bg-b">g-4</div>
-                      <div class="g-6 p_10 bg-b">g-6</div>
-                     <div class="g-6 p_10 bg-b">g-6</div>
-                     <div class="g-5 p_10 bg-b">g-5</div>
-                     <div class="g-7 p_10 bg-b">g-7</div>
-                     <div class="g-1 p_10 bg-b">g-1</div>
-                     <div class="g-11 p_10 bg-b">g-11</div>
-                     <div class="g-12 p_10 bg-b">g-12</div>
+                     <div class="g-2 p_10 bg-b clr-f">g-2 (2/12)</div>
+                     <div class="g-2 p_10 bg-b clr-f">g-2 (2/12)</div>
+                     <div class="g-2 p_10 bg-b clr-f"> g-2 (2/12)</div>
+                     <div class="g-2 p_10 bg-b clr-f"> g-2 (2/12)</div>
+                     <div class="g-2 p_10 bg-b clr-f"> g-2 (2/12)</div>
+                     <div class="g-2 p_10 bg-b clr-f"> g-2 (2/12)</div>
+                     <div class="g-3 p_10 bg-b clr-f">g-3 (3/12)</div>
+                     <div class="g-3 p_10 bg-b clr-f">g-3 (3/12)</div>
+                     <div class="g-3 p_10 bg-b clr-f">g-3 (3/12)</div>
+                     <div class="g-3 p_10 bg-b clr-f">g-3 (3/12)</div>
+                     <div class="g-4 p_10 bg-b clr-f">g-4 (4/12)</div>
+                     <div class="g-4 p_10 bg-b clr-f">g-4 (4/12)</div>
+                     <div class="g-4 p_10 bg-b clr-f">g-4 (4/12)</div>
+                      <div class="g-6 p_10 bg-b clr-f">g-6 (6/12)</div>
+                     <div class="g-6 p_10 bg-b clr-f">g-6 (6/12)</div>
+                     <div class="g-5 p_10 bg-b clr-f">g-5 (5/12)</div>
+                     <div class="g-7 p_10 bg-b clr-f">g-7 (7/12)</div>
+                     <div class="g-1 p_10 bg-b clr-f">g-1 </div>
+                     <div class="g-11 p_10 bg-b clr-f">g-11 (11/12)</div>
+                     <div class="g-12 p_10 bg-b clr-f">g-12 (12/12)</div>
+                 </div>
+                 
+                 <div class="clear g-11 g-12-m m_A mH10">
+                    <br/>
+                     <h3 class=" fw-4 _C camCase p_tb_10 clr-t">The Regal Grid</h3>
+                     <p class="_L">
+                         Regal grid is super lightweight and responsive on all media devices, written with abbreviated CSS classes allowing you to take full advantage of the library.
+                         It is blundled with various usefull snippets and components , which are necessary
+                         for bootstraping web projects . With total size of ~13kb minified and ~3kb (only grid) makes it more handy to have in your projects.
+                     </p>
+                     <p class="_L m_tb_10">
+                         The grid classes are really easy based on property initials , like ".container" class is used for main container with width depending upon media devices, for full width container there is ".fullCon" class width 100% of total width size.
+                         Similary ".row" for the grid parent element and ".g-$" as the grid where `$` is from 1 - 12.
+                          
+                         
+                     </p>
+                     
+                     <p class="_L m_tb_10">
+                         Regal grids can be sized depending upon the media type ie. mobile , tablet and large screens . For example ".g-12" can be sized as ".g-6-s" half size grid on mobile "*-s" just need to get append with grid size , similary there is "*-m" for tablet size media responsive grids.   
+                          
+                         
+                     </p>
+                     
+                     <pre class="_L ">
+                         <xmp class="m0 -Yscroll fs-13 clr-p">
+    <div class="row"> // row 
+         <div class="g-6 g-10-s g-8-m"></div> // 1/12 size on large screens , 10/12 size on small devices and 8/12 size on tablet devices.
+          
+          <div class="g-6 g-10-s g-8-m"></div> // g-$ is default float left if placed first in class attribute else float gets void.
+    </div>
+                         </xmp>
+                     </pre>
+                     
+                     
                  </div>
                  
              </div><!--grids-->
@@ -155,8 +208,8 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                            <button class="btn bdr0 p_10 m_tb_10 error">error state</button>
                             <button class="btn bdr0 p_10 m_tb_10 info">information</button>
                             <button class="btn bdr0 p_10 m_tb_10 --p">primary</button>
-                          <button class="btn bdr0 p_10 ok m_tb_10 --s">secondary</button>
-                           <button class="btn bdr0 p_10 error m_tb_10 --t">ternory</button>
+                          <button class="btn bdr0 p_10 m_tb_10 --s">secondary</button>
+                           <button class="btn bdr0 p_10 m_tb_10 --t">ternory</button>
                             <button class="btn bdr0 p_10 m_tb_10 bg-0 clr-f">black</button>
                             
                      </p>
@@ -239,19 +292,19 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                          <input type="radio" name="acc" id="_11" class="hide" />
                           <label for="_11" class="dB bdr-B p-R m0 hand p_10">accordian  1</label>
                            
-                           <p class="-accTxt mH10 card hide p_10">
+                           <p class="-accTxt card p_10">
                                accordian 1 content goes here
                            </p>
                            <input type="radio" name="acc" id="_21" class="hide"/>
                            <label for="_21" class="dB bdr-B p-R m0 hand p_10">accordian  2</label>
                            
-                           <p class="-accTxt mH10 card bdr hide p_10">
+                           <p class="-accTxt card p_10">
                                accordian 2 content goes here
                            </p>
                            <input type="radio" name="acc" id="_31" class="hide"/>
                            <label for="_31" class="dB bdr-B p-R m0 hand p_10">accordian  3</label>
                            
-                           <p class="-accTxt mH10 card bdr hide p_10">
+                           <p class="-accTxt card p_10">
                                accordian 3 content goes here
                            </p>
                        </div>
@@ -551,7 +604,7 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
      </main>
      <br/>
      <footer class="mainFtr mH10 bg-t row p_10">
-         <span class="g-4 clr-b _C p_10">Made with <b class="clr-s">&hearts;</b> and <xmp class="dI"><code> </code></xmp> by  <a href="http://rahulrao.in" class="clr-s ">Rahul Rao</a> </span>
+         <span class="g-4 clr-b _C p_10">Made with <b class="clr-s">&hearts;</b> and <xmp class="dI"><code> SCSS </code></xmp> by  <a href="http://rahulrao.in" class="clr-s ">Rahul Rao</a> </span>
          <span class="g-4 _C p_10">
              <a href="https://opensource.org/licenses/MIT" target="_blank" class="clr-b">Open source &amp; MIT License</a>
          </span>

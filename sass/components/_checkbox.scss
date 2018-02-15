@@ -17,7 +17,7 @@
     
     @extend .hide;
     
-    & + label:before { @extend %uncheck; }
+    & + label:before { @extend %uncheck;}
     
     &:checked + label:after {
     @extend %shared;

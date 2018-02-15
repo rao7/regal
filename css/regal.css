@@ -161,7 +161,7 @@ body .m_0 { margin: 0; }
 body .m_10 { margin: 0.7142857143rem; }
 body .m_tb_10 { margin: 0.625rem 0; }
 body .m_A { margin: 0 auto; }
-body .p_0 { padding: 0; }
+body .p_0, body .-accordian > input:not(:checked) + label + .-accTxt { padding: 0; }
 body .p_tb_10 { padding: 0.625rem 0; }
 body .p_10 { padding: 0.625rem; }
 
@@ -177,7 +177,7 @@ body .p_10 { padding: 0.625rem; }
 
 .-z3, .btn:not(.flat):hover { -webkit-box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.38); -ms-box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.38); -moz-box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.38); box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.38); }
 
-.-Yscroll-area { max-height: 3rem; overflow-y: auto; }
+.-Yscroll { overflow-y: auto; }
 
 .mH10 { min-height: 0.625rem; }
 
@@ -273,7 +273,7 @@ body .p_10 { padding: 0.625rem; }
 
 .noView { visibility: hidden; }
 
-.flowHide { overflow: hidden; }
+.flowHide, .-accordian > input:not(:checked) + label + .-accTxt { overflow: hidden; }
 
 /* px to rem mixin */
 /* eo px to rem mixin */
@@ -286,11 +286,13 @@ input:focus + .uLine:after { content: ""; width: 99%; padding: 1px; background-c
 
 .-tabs label.active:after, .-tabs label:hover:after, .-bar.active:after, .-bar:hover:after, .-accordian > input + label:after { content: ""; }
 
-.-tabs + .-tabContent input[type="radio"]:checked + *, input[type="checkbox"].z-pop:checked + .popUP, .-accordian > input[type="radio"]:checked + label + .-accTxt, .-accordian > input[type="checkbox"]:checked + label + .-accTxt { display: block; }
+.-tabs + .-tabContent input[type="radio"]:checked + *, input[type="checkbox"].z-pop:checked + .popUP { display: block; }
 
 .-tabs label.active:after, .-tabs label:hover:after, .-bar.active:after, .-bar:hover:after { width: 100%; border: 0.1rem solid #f57c00; }
 
+.-accordian > input:not(:checked) + label + .-accTxt { height: 0; transition: all 0.2s ease-out; }
 .-accordian > input + label:after { border: 1px solid; border-color: transparent #263238 #263238 transparent; padding: 5px; right: 0.5rem; top: 1rem; transform: rotate(45deg); transition: all 0.2s ease-out; }
+.-accordian > input[type="radio"]:checked + label + .-accTxt, .-accordian input[type="checkbox"]:checked + label + .-accTxt { height: auto; overflow: auto; min-height: 3rem; }
 .-accordian > input[type="radio"]:checked + label:after, .-accordian input[type="checkbox"]:checked + label:after { transform: rotate(-135deg); }
 
 .popUP { height: 100%; background-color: rgba(0, 0, 0, 0.85); }
@@ -305,3 +307,5 @@ input:focus + .uLine:after { content: ""; width: 99%; padding: 1px; background-c
 @media screen and (max-width: 45em) { .cBox input[type="radio"]:checked + label:after, .rBox input[type="radio"]:checked + label:after { top: 3px; } }
 .cBox input[type="checkbox"] + label:before, .rBox input[type="checkbox"] + label:before { border-radius: 0; }
 .cBox input[type="checkbox"]:checked + label:after, .rBox input[type="checkbox"]:checked + label:after { transform: rotateZ(-45deg); width: 14px; height: 4px; border: 2px solid; border-color: transparent transparent #f50057 #f50057; left: 4px; top: -1px; }
+
+/*# sourceMappingURL=regal.css.map */
