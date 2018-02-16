@@ -7,7 +7,7 @@
     border: 1px solid $ternary;
     padding: 8px;
     @extend .dIB;
-    vertical-align: top;
+    @extend .-vTop;
     margin-right: 13px; 
 }
 
@@ -18,15 +18,21 @@
     @extend .hide;
     
     & + label:before { @extend %uncheck;}
-    
+    & + label:after {
+        
+        @extend %shared;
+        @extend .p-A;
+        @extend .easy;
+        padding:0;
+        left: 6px;
+        top: 6px;
+        }
     &:checked + label:after {
-    @extend %shared;
+    
     background-color: $secondary;
     padding: 5px;
-    @extend .p-A;
     left: 4px;
     top: 2px;
-    transition: all 0.4s ease-out;
     
    @media screen and (max-width:45em){ top: 3px;}
 
@@ -34,17 +40,21 @@
         
   }
     
-       input[type="checkbox"] { // checkboxes
+  input[type="checkbox"] { // checkboxes
         
     @extend .hide;
     
     & + label:before { @extend %uncheck; border-radius: 0; }
-    
+    & + label:after {
+        @extend %shared; 
+        @extend .easy; 
+        width:0;
+        height: 4px;
+        transform: rotateZ(120deg);
+        }
     &:checked + label:after {
-    @extend %shared;
     transform: rotateZ(-45deg);
     width: 14px;
-    height: 4px;
     border: 2px solid;
     border-color: transparent transparent $secondary $secondary;
     @extend .p-A;

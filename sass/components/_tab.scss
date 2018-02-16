@@ -6,7 +6,8 @@
 input[type="checkbox"].z-pop:checked + .popUP { display: block; }
 .-tabs label , .-bar{
     &:not(.active):not(.clr-p):not(:hover){
-        @extend .clr-s;
+        //@extend .clr-s;
+        color:#f50057;
     }
     &.active:after , &:hover:after{
         width:$_100;

@@ -161,7 +161,7 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                  
                  <div class="clear g-11 g-12-m m_A mH10">
                     <br/>
-                     <h3 class=" fw-4 _C camCase p_tb_10 clr-t">The Regal Grid</h3>
+                     <h3 class=" fw-4 _C camCase p_tb_10 clr-s">The Regal Grid</h3>
                      <p class="_L">
                          Regal grid is super lightweight and responsive on all media devices, written with abbreviated CSS classes allowing you to take full advantage of the library.
                          It is blundled with various usefull snippets and components , which are necessary
@@ -183,9 +183,9 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                      <pre class="_L ">
                          <xmp class="m0 -Yscroll fs-13 clr-p">
     <div class="row"> // row 
-         <div class="g-6 g-10-s g-8-m"></div> // 1/12 size on large screens , 10/12 size on small devices and 8/12 size on tablet devices.
+         <div class="g-6 g-10-s g-8-m"></div> // 1/2 size on large screens , 5/6 size on small devices and 2/3 size on tablet devices.
           
-          <div class="g-6 g-10-s g-8-m"></div> // g-$ is default float left if placed first in class attribute else float gets void.
+          <div class="g-6 g-10-s g-8-m"></div> // g-$ is default float left inside ".row" parent if placed first in class attribute else float gets void.
     </div>
                          </xmp>
                      </pre>
@@ -203,9 +203,9 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                      <h4 class="camCase clr-s">buttons</h4>
                      <p></p>
                      <p class="m_tb_10">
-                         <button class="btn bdr0 p_10 m_tb_10">Submit</button>
-                          <button class="btn bdr0 p_10 m_tb_10 ok">success</button>
-                           <button class="btn bdr0 p_10 m_tb_10 error">error state</button>
+                         <button class="btn p_10 m_tb_10">Submit</button>
+                          <button class="btn p_10 m_tb_10 ok">success</button>
+                           <button class="btn p_10 m_tb_10 error">error state</button>
                             <button class="btn bdr0 p_10 m_tb_10 info">information</button>
                             <button class="btn bdr0 p_10 m_tb_10 --p">primary</button>
                           <button class="btn bdr0 p_10 m_tb_10 --s">secondary</button>
@@ -218,6 +218,20 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                           <button class="btn bdr0 p_10 m_tb_10 --s g-2 g-3-s">secondary</button>
                            <button class="btn bdr0 p_10 m_tb_10 --t g-3 g-5-s ">ternory</button>
                             <button class="btn bdr0 p_10 m_tb_10 bg-0 clr-f g-4-s ">black</button>
+                     </p>
+                     <p class="row">
+                         <button class="btn flat bdr0 p_10 m_tb_10 --p g-2 ">primary</button>
+                          <button class="btn flat bdr0 p_10 m_tb_10 --s g-2 g-3-s">secondary</button>
+                           <button class="btn flat bdr0 p_10 m_tb_10 --t g-3 g-5-s ">ternory</button>
+                            <button class="btn flat bdr0 p_10 m_tb_10 bg-0 clr-f g-4-s ">black</button>
+                     </p>
+                     <p class="row">
+                         <button class="btn btn-o bdr0 p_10 m_tb_10 --p g-2 ">primary</button>
+                          <button class="btn btn-o bdr0 p_10 m_tb_10 --s g-2 ">secondary</button>
+                           <button class="btn btn-o bdr0 p_10 m_tb_10 --t g-2  ">ternory</button>
+                           <button class="btn btn-o bdr0 p_10 m_tb_10 ok g-2">success</button>
+                           <button class="btn btn-o bdr0 p_10 m_tb_10 error g-2 ">error</button>
+                           
                      </p>
                      <br/>
                      <h4 class="camCase clr-s m_tb_10">input types</h4>
@@ -245,8 +259,11 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                          <p class="g-4 ">
                          <span class="bdr-B dB">
                          <b class="fs-16 camCase dB p_10 clr-b fw-4">text box</b>
-                       <input type="text" placeholder="Enter some text here" class="m0 p_tb_10 fullCon"/>
+                         <span class="inpt dB">
+                       <input type="text"  class="inpt m0 p_10 fullCon" required/>
+                       <label>Something</label>
                        <i class="uLine"></i>
+                       </span>
                        </span>
                        </p>
                      </div>

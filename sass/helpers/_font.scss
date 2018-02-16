@@ -27,7 +27,7 @@ html, body { height: $_100; width: $_100; font-family: $font-family; line-height
     .fw-3 { font-weight:300;}
     .fw-4 { font-weight:400;}
     .fw-5 { font-weight:500;}
-    .fw-6 , b , .b{ font-weight:600;}
+    .fw-6 , b , .b { font-weight:600;}
     .fw-7 , .b2{ font-weight:700;}
 			
 // -Size(fs) 	
@@ -38,7 +38,10 @@ $i:32 ;
     $i: $i - 2 ;
 }
 
+// line height
 
+.lh-1 { line-height: $font-height - 0.4; }
+.lh-2 { line-height: $font-height + 2 - 0.4; } 
 
 //  headings sizes
 

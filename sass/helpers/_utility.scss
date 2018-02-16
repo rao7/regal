@@ -27,7 +27,7 @@ body {
 .p_0 {padding:0;}
 .p_tb_10 {padding:0.625rem 0;}
 .p_10 {padding:0.625rem;}
-
+.p_1 {padding:1rem;}
 
 }
 
@@ -42,6 +42,7 @@ body {
 .-z2 {@include shadow (0, 0.2rem, 0.7rem, rgba(0,0,0,0.28));  }
 .-z3 {@include shadow (0, 0.3rem, 0.8rem, rgba(0,0,0,0.38));  }
 
+.easy {  -webkit-transition: all 0.25s ease-in-out; transition: all 0.15s ease-in-out;}
 
 .-Yscroll{ overflow-y: auto;}
 
