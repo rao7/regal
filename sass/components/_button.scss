@@ -1,7 +1,7 @@
 @import '../mixins/_mixins';
 @import '../grid/_global';
 
-.btn{ @extend .hand; @extend .easy; @extend .bdr0; @extend .fs-14;
+.btn{ @extend .hand; @extend .easy; border:0; @extend .fs-14;
    
     &.btn-lg { line-height: 1.6;}
     

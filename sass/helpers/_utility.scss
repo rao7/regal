@@ -7,12 +7,13 @@
 
 
 // border definitions 
-
-.bdr:not(.bdr0) { border:1px solid $base; }
-.bdr.error { border:1px solid $error; }
+.border { border-style:solid; border-width:1px;}
+.bdr:not(.bdr0):not(.error):not(.ok) { @extend .border; border-color:$base; }
+.bdr.error { @extend .border; border-color:$error; }
+.bdr.ok { @extend .border; border-color:$ok; }
 .bdr-B { @include bdr(0,0,1px,0,$base,solid);}
 
-.bdr0 { border:0;}
+.bdr0{ border:0;}
 .bR3 { border-radius:3px; }
 
 // margin & padding definitions
@@ -42,7 +43,7 @@ body {
 .-z2 {@include shadow (0, 0.2rem, 0.7rem, rgba(0,0,0,0.28));  }
 .-z3 {@include shadow (0, 0.3rem, 0.8rem, rgba(0,0,0,0.38));  }
 
-.easy {  -webkit-transition: all 0.25s ease-in-out; transition: all 0.15s ease-in-out;}
+.easy {  -webkit-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out;}
 
 .-Yscroll{ overflow-y: auto;}
 
@@ -50,5 +51,21 @@ body {
 
 .card { @extend .-z1;  @extend .bR3; }
 
+.txtChunk { white-space: nowrap; text-overflow: ellipsis; @extend .flowHide;}
 
+//popUp
+
+.popUP {
+    
+    height:$_100;
+    background-color: rgba(0,0,0,0.85);
+    .popCon {
+        
+        .--x { top:-0.7rem;}
+        top:10vh;
+        min-height: 4rem;
+        max-height: 76vh;
+        @extend .-Yscroll;
+    }
+}
 

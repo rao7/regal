@@ -20,7 +20,14 @@ $font-height: 1.4;
 $font-family: 'Lato', Helvetica, sans-serif;
 
 
-html, body { height: $_100; width: $_100; font-family: $font-family; line-height: $font-height; }
+html body { height: $_100; width: $_100; font-family: $font-family; line-height: $font-height;
+text-rendering: optimizeLegibility;
+text-rendering: geometricPrecision;
+font-smooth: always;
+ -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
 
     
 // -Weight(fw) 

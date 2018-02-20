@@ -6,11 +6,11 @@
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
  <meta name="keywords" content="regal CSS , lightweight CSS framework , CSS grid only , CSS framework , SCSS framework , SCSS responsive grid system , responsive grid system, regal SCSS" />
  
- <meta  name="description" content="Regal CSS is a SCSS based CSS framework for quick bootstraping frontend Development , it has lightweight responsive grid system built over abbreviated reusable classes. "/>
+ <meta  name="description" content="Regal CSS is an SCSS based CSS library for a quick web project setup, it has lightweight responsive grid system built over abbreviated reusable classes. "/>
  <meta name="author" content="Rahul Rao" />
  <link rel="stylesheet" href="css/regal.css" />
  <style>
-     .snippets.hlpr .card{min-height: 20vw;}
+     .snippets.hlpr .card , .mh20vw{min-height: 20vw;}
      a:not(:hover){text-decoration: none;}
      
      .mainHdr:before {
@@ -128,7 +128,7 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
 </svg>
 
              <h1 class="title p_10 clr-f fw-4 uCase ">regal CSS</h1>
-             <h5 class="clr-f fw-5 g-9 g-12-m m_A">An SCSS based scalable and lightweight mobile first CSS library for quick bootstraping frontend development bundled with Grids , Snippets and abbreviated reusable classes. </h5>
+             <h5 class="clr-f fw-5 g-9 g-12-m m_A">An SCSS based scalable and lightweight mobile first responsive CSS library for quick bootstraping frontend development bundled with Grids , Snippets and abbreviated reusable classes. </h5>
          </hgroup>
      </header>
      
@@ -162,7 +162,7 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                  <div class="clear g-11 g-12-m m_A mH10">
                     <br/>
                      <h3 class=" fw-4 _C camCase p_tb_10 clr-s">The Regal Grid</h3>
-                     <p class="_L">
+                     <p class="_L fw-5">
                          Regal grid is super lightweight and responsive on all media devices, written with abbreviated CSS classes allowing you to take full advantage of the library.
                          It is blundled with various usefull snippets and components , which are necessary
                          for bootstraping web projects . With total size of ~13kb minified and ~3kb (only grid) makes it more handy to have in your projects.
@@ -196,49 +196,95 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
              </div><!--grids-->
              
              <section class="row m_tb_10 _C">
-                 <h3 class=" fw-4 _C camCase p_tb_10 clr-t">form elements</h3>
-                 <!-- button , inputs , radio button , checkbox -->
+                 <h3 class=" fw-4 _C camCase p_tb_10 clr-t">Regal Snippets</h3>
+                 <!-- colors , button , inputs , radio button & checkbox , tabs , accordian , popup -->
                  
+                <article class="card bg-f mH10 g-11 g-12-m m_A p_10">
+                 <h4 class="camCase clr-s">colors</h4>
+                 <br/>
+                 <p class="m_tb_10">
+                    By Default Regal CSS comes with fiew types of colors definations for your websites , they are primary(.clr-s) , secondary(.clr-s) , ternary(.clr-t) , base(.clr-b) , white(.clr-f) , black(.clr-0) , material red(.clr-error) , material green(.clr-ok) , material orange (.clr-info). These colors are defined inside "_global.scss" SCSS partial .
+                    <br/>
+                    <strong class="fw-6">you can change the color variables according to your theme needs.</strong> 
+                 </p>
+                 <p class="row">
+                     <span class="g-2 p_10 bg-p lh-1 clr-f" title="primary">
+                       #9c27b0
+                     </span>
+                     <span class="g-2 clr-f p_10 bg-s lh-1"  title="secondary">#f50057</span>
+                     <span class="g-2 clr-f p_10 bg-t lh-1" title="ternary">#263238</span>
+                     <span class="g-2 clr-0 p_10 bg-b lh-1" title="base">#e1e1e1</span>
+                     <span class="g-2 clr-f p_10 bg-0 lh-1"  title="black">#000000</span>
+                     <span class="g-2 p_10 bg-f lh-1 bdr clr-b" title="white">#ffffff</span>
+                    
+                 </p>
+                 <p class="row">
+                     <span class="g-2 p_10 bg-grn lh-1 clr-f" title="success">
+                      #00c853
+                     </span>
+                     <span class="g-2 clr-f p_10 bg-red lh-1" title="error">#f44336</span>
+                     <span class="g-2 clr-f p_10 bg-info lh-1" title="info">#f57c00</span>
+                    
+                    
+                 </p>
+                 </article>
+                 <br/>
                  <article class="card bg-f mH10 g-11 g-12-m m_A p_10">
                      <h4 class="camCase clr-s">buttons</h4>
-                     <p></p>
+                     <p class="m_tb_10">
+                         Regal button allow you to take full advantage of independent classes to control the sizes of the buttons . You can apply different grid / padding / color / font / line-height classes to modify the size , background color classes for button colors.
+                     </p>
+                  <h5>Normal buttons</h5>
                      <p class="m_tb_10">
                          <button class="btn p_10 m_tb_10">Submit</button>
                           <button class="btn p_10 m_tb_10 ok">success</button>
                            <button class="btn p_10 m_tb_10 error">error state</button>
-                            <button class="btn bdr0 p_10 m_tb_10 info">information</button>
-                            <button class="btn bdr0 p_10 m_tb_10 --p">primary</button>
-                          <button class="btn bdr0 p_10 m_tb_10 --s">secondary</button>
-                           <button class="btn bdr0 p_10 m_tb_10 --t">ternory</button>
-                            <button class="btn bdr0 p_10 m_tb_10 bg-0 clr-f">black</button>
+                            <button class="btn p_10 m_tb_10 info">information</button>
+                            <button class="btn p_10 m_tb_10 --p">primary</button>
+                          <button class="btn p_10 m_tb_10 --s">secondary</button>
+                           <button class="btn p_10 m_tb_10 --t">ternory</button>
+                            <button class="btn p_10 m_tb_10 bg-0 clr-f">black</button>
                             
                      </p>
+                     <h5>Buttons with grid classes and media responsive</h5>
                       <p class="row">
-                         <button class="btn bdr0 p_10 m_tb_10 --p g-2 ">primary</button>
-                          <button class="btn bdr0 p_10 m_tb_10 --s g-2 g-3-s">secondary</button>
-                           <button class="btn bdr0 p_10 m_tb_10 --t g-3 g-5-s ">ternory</button>
-                            <button class="btn bdr0 p_10 m_tb_10 bg-0 clr-f g-4-s ">black</button>
+                         <button class="btn p_10 m_tb_10 --p g-2 ">primary</button>
+                          <button class="btn p_10 m_tb_10 --s g-2 g-3-s">secondary</button>
+                           <button class="btn p_10 m_tb_10 --t g-3 g-5-s ">ternory</button>
+                            <button class="btn p_10 m_tb_10 bg-0 clr-f g-4-s ">black</button>
                      </p>
+                     <br/>
+                     <h5>Buttons without shadow and radius add ".flat" class</h5>
                      <p class="row">
-                         <button class="btn flat bdr0 p_10 m_tb_10 --p g-2 ">primary</button>
-                          <button class="btn flat bdr0 p_10 m_tb_10 --s g-2 g-3-s">secondary</button>
-                           <button class="btn flat bdr0 p_10 m_tb_10 --t g-3 g-5-s ">ternory</button>
-                            <button class="btn flat bdr0 p_10 m_tb_10 bg-0 clr-f g-4-s ">black</button>
+                         <button class="btn flat p_10 m_tb_10 --p g-2 ">primary</button>
+                          <button class="btn flat p_10 m_tb_10 --s g-2 g-3-s">secondary</button>
+                           <button class="btn flat p_10 m_tb_10 --t g-3 g-5-s ">ternory</button>
+                            <button class="btn flat p_10 m_tb_10 bg-b clr-0 g-4-s ">base</button>
                      </p>
+                     <br/>
+                     <h5>Hollow Buttons with border only add ".btn-o" class</h5>
                      <p class="row">
-                         <button class="btn btn-o bdr0 p_10 m_tb_10 --p g-2 ">primary</button>
-                          <button class="btn btn-o bdr0 p_10 m_tb_10 --s g-2 ">secondary</button>
-                           <button class="btn btn-o bdr0 p_10 m_tb_10 --t g-2  ">ternory</button>
-                           <button class="btn btn-o bdr0 p_10 m_tb_10 ok g-2">success</button>
-                           <button class="btn btn-o bdr0 p_10 m_tb_10 error g-2 ">error</button>
+                         <button class="btn btn-o p_10 m_tb_10 --p g-2 ">primary</button>
+                          <button class="btn btn-o p_10 m_tb_10 --s g-2 ">secondary</button>
+                           <button class="btn btn-o p_10 m_tb_10 --t g-2  ">ternory</button>
+                           <button class="btn btn-o p_10 m_tb_10 ok g-2">success</button>
+                           <button class="btn btn-o p_10 m_tb_10 error g-2 ">error</button>
                            
                      </p>
                      <br/>
-                     <h4 class="camCase clr-s m_tb_10">input types</h4>
-                     <div class="m_tb_10 row ">
-                        <p class="g-4 rBox">
+                    
+                 </article>
+             </section>
+             <br/>
+             <section class="snippets m_tb_10 row">
+                 
+                 <article class="mH10 g-11 g-12-m m_A clear">
+                    
+                     <div class="g-6 card bg-f m_tb_10 fullCon-s mh20vw p_10">
+                         <h5 class="camCase clr-s _C ">Radio &amp; Checkbox </h5>
+                          <p class="g-6 rBox">
                         
-                        <b class="fs-16 camCase dB p_10 clr-b fw-4">radio buttons</b>
+                        <b class="fs-14 camCase dB _C clr-b fw-4">radio buttons</b>
                         <span class="p_10 dB">
                          <input type="radio" name="say" id="yes" value="yes"/>
                          <label for="yes" class="camCase fw-5 m10">say yes</label>
@@ -246,9 +292,9 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                          <label for="no" class="camCase fw-5 m10">say no</label>
                          </span>
                          </p>
-                         <p class="g-4 cBox">
+                         <p class="g-6 cBox">
                            
-                            <b class="fs-16 camCase dB p_10 clr-b fw-4">checkboxes</b>
+                            <b class="fs-14 camCase dB _C clr-b fw-4">checkboxes</b>
                             <span class="p_10 dB">
                           <input type="checkbox" name="say" id="opt1" value="option 1"/>
                          <label for="opt1" class="camCase fw-5 m10">option 1</label>
@@ -256,54 +302,84 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                          <label for="opt2" class="camCase fw-5 m10">option 2</label>
                          </span>
                          </p>
-                         <p class="g-4 ">
+                         
+                         <p class="p_10"> You can achieve this by adding ".rBox" and ".cBox" class in the parent container of input type checkbox or radio alog with their labels.</p>
+                         
+                         
+                     </div>
+                     <div class="g-6 card bg-f m_tb_10 f-R fullCon-s p_10 mh20vw">
+                     <h5 class="camCase dB clr-s _C fw-4">text box</h5>
+                         <p class="g-12">
                          <span class="bdr-B dB">
-                         <b class="fs-16 camCase dB p_10 clr-b fw-4">text box</b>
+                        
                          <span class="inpt dB">
                        <input type="text"  class="inpt m0 p_10 fullCon" required/>
-                       <label>Something</label>
+                       <label>Material label</label>
                        <i class="uLine"></i>
                        </span>
                        </span>
+                       
+                       <span class="dB m_tb_10">
+                        
+                       <input type="text"  class="bdr inpt m0 p_10 fullCon" placeholder="Bordered Input"/>
+                       
+                       </span>
+                       
+                       <span class="dB m_tb_10">
+                        
+                       <input type="text"  class="bdr error inpt m0 p_10 fullCon" placeholder="Error Input"/>
+                       
+                       </span>
+                       
+                       <span class="bdr ok dB m_tb_10">
+                        
+                       <input type="text"  class="bdr0 inpt m0 p_10 fullCon" placeholder="Success Input"/>
+                       
+                       </span>
+                       
+                       <span class="bdr dB m_tb_10">
+                        
+                       <select class="bdr0 inpt m0 p_10 fullCon" >
+                       <option value="1">option 1</option>
+                       <option value="2">option 2</option>
+                       <option value="3">option 3</option>
+                       </select>
+                       
+                       </span>
+                       
+                       
+                       
+                       
                        </p>
                      </div>
-                    
-                    
-                    
-                 </article>
-             </section>
-             
-             <section class="snippets m_tb_10 row">
-                 <h3 class="clr-t _C fw-4 m_tb_10">snippets(tabs, accordian, popup)</h3>
-                 <article class="card bg-f mH10 g-11 g-12-m m_A p_10">
-                  <div class="row">
-                   
-                   
-                   <div class="g-5 tabCon">
-                      <p class="fs-18 _C"> Tabs</p>
-                       <div class="-tabs row camCase _C">
-                           <label for="_1" class="g-3 p-R m0 m_tb_10 g-3-s hand p_10">tab 1</label>
-                           <label for="_2"  class="g-3 p-R m0  m_tb_10 g-3-s hand p_10">tab 2</label>
-                           <label for="_3"  class="g-3 p-R m0  m_tb_10 g-3-s hand p_10">tab 3</label>
+                  
+                     <div class="g-6 card bg-f m_tb_10 fullCon-s p_10 mh20vw">
+                         <h5 class="clr-s m_tb_10 _C"> Tabs</h5>
+                       <div class="-tabs row camCase _C -z2 bR3">
+                           <label for="_1" class="g-3 p-R g-3-s hand p_10 m_0 active">tab 1</label>
+                           <label for="_2"  class="g-3 p-R g-3-s hand p_10 m_0">tab 2</label>
+                           <label for="_3"  class="g-3 p-R g-3-s hand p_10 m_0">tab 3</label>
                        </div>
-                       <div class="-tabContent">
-                           <input type="radio" name="tab" id="_1" class="hide" checked/>
-                           <p class="mH10 bdr hide p_10">
+                       
+                        <input type="radio" name="tab" id="_1" class="hide" checked/>
+                           <article class="-tabContent mH10 p_10 card">
                                tab 1 content goes here
-                           </p>
+                               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque neque officia nisi ea obcaecati provident recusandae ipsa vel alias eaque praesentium ratione, ducimus, enim debitis dolorum! Officia corrupti odit, sapiente!
+                           </article>
                            <input type="radio" name="tab" id="_2" class="hide"/>
-                           <p class="mH10 bdr hide p_10">
+                           <article class="-tabContent mH10 p_10 card">
                                tab 2 content goes here
-                           </p>
+                               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque neque officia nisi ea obcaecati provident recusandae ipsa vel alias eaque praesentium ratione, ducimus, enim debitis dolorum! Officia corrupti odit, sapiente!
+                           </article>
                            <input type="radio" name="tab" id="_3" class="hide"/>
-                           <p class="mH10 bdr hide p_10">
+                           <article class="-tabContent mH10 p_10 card">
                                tab 3 content goes here
-                           </p>
-                       </div>
-                   </div>
-                   
-                     <div class="g-5 accCon">
-                      <p class="fs-18 _C"> Accordian</p>
+                               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque neque officia nisi ea obcaecati provident recusandae ipsa vel alias eaque praesentium ratione, ducimus, enim debitis dolorum! Officia corrupti odit, sapiente!
+                           </article>
+                      
+                     </div>
+                     <div class="g-6 card bg-f m_tb_10 fullCon-s f-R p_10 mh20vw">
+                        <h4 class="camCase clr-s">Accordian</h4>
                    
                        <div class="-accordian camCase">
                          <input type="radio" name="acc" id="_11" class="hide" />
@@ -325,9 +401,11 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                                accordian 3 content goes here
                            </p>
                        </div>
-                   </div>
-                   
-                   <div class="g-2 popCon">
+                     </div>
+                     
+                     
+                     <div class="g-6 card bg-f m_tb_10 fullCon-s p_10 mh20vw">
+                     
                       <p class="fs-18 _C" > Pop Up</p>
                       <br/>
                        <label for="pop1" class="btn --s clr-f p_10 bdr0">trigger popUp</label>
@@ -349,11 +427,34 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                                </div>
                                
                                
-                         </section><br/><br/>
-                       <!--  <span class="clr-0 m_10 pd10 dB" data-tip="this is poup click here hkasd ajdhasd">this is tooltip</span>-->
-                   </div>
-                   
-                   </div>
+                         </section>
+                         <br/>
+                         <br/>
+                         
+                         
+                       <label for="ddown" class="btn --p clr-f p_10 bdr0">dropdown</label>
+                       <div class="row">
+                       <input type="checkbox" name="pop" id="ddown" class="z-pop hide"/>
+                       <section class="popUP p-A _oL _oT bg-b  _C _z999 hide">
+                               <div class="popCon -z3 g-7 g-8-m m_A p-R bg-f p_10 _L">
+                                   <label for="ddown" class="p-A clr-t fs-30 _oR --x pd5 hand _z99">&times;</label>
+                                   
+                                   <div class="popUP-txt row p_10 _J">
+                                       <article>
+                                           <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, officia facilis. Nihil, quis cum ipsam quas ea sequi sint nam magnam, rem labore fuga dicta perferendis corporis qui sapiente delectus!</div>
+                                           
+                                       </article>
+                                   </div>
+                               </div>
+                               
+                               
+                         </section>
+                         </div>
+                         <br/>
+                     </div>
+                     
+                     
+                 
                  </article>
              </section>
               <section class="snippets hlpr m_tb_10 row">

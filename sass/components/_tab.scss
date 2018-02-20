@@ -2,40 +2,57 @@
 // A tab & accordian utility with scss
 
 %pseudo { content:""; @extend .p-A; }
-.-tabs + .-tabContent input[type="radio"]:checked + * ,
-input[type="checkbox"].z-pop:checked + .popUP { display: block; }
-.-tabs label , .-bar{
-    &:not(.active):not(.clr-p):not(:hover){
-        //@extend .clr-s;
-        color:#f50057;
+.-tabs ~ input[type="radio"]:checked + .-tabContent,
+input[type="checkbox"].z-pop:checked + .popUP { display: block;}
+
+.-tabs{
+    & ~ input[type="radio"]:not(:checked) + .-tabContent {
+        display: none; @extend .easy;
+        }
+    
+    & label , .-bar{
+    &:not(.active):not(:hover){
+        color:$secondary;
     }
     &.active:after , &:hover:after{
         width:$_100;
-        border:0.1rem solid $info;
+        height:2px;
+        @extend .bg-s;
         @extend %pseudo;
         @extend ._oB;
         @extend ._oL;
     }
+}  
 }
 
+
+.arwDwn:after , %arwDwn {
+    @extend %pseudo ;
+            @extend .easy ;
+            border:1px solid;
+            border-color:transparent  $ternary $ternary transparent;
+            padding: 3.5px;
+            transform: rotate(45deg);
+}
 
 
 .-accordian {
     & > input {
-        &:not(:checked) + label + .-accTxt { @extend .p_0; height: 0; @extend .flowHide;
-            transition: all 0.2s ease-out; }
-        & + label:after {
-            @extend %pseudo ;
-            border:1px solid;
-            border-color:transparent  $ternary $ternary transparent;
-            padding: 5px;
+        &:not(:checked) + label + .-accTxt { @extend .p_0; height: 0; @extend .flowHide; @extend .easy; }
+        & + label{ @extend .easy;
+            &:after{
+            @extend %arwDwn ;
             right:0.5rem;
             top:1rem;
-            transform: rotate(45deg);
-            transition: all 0.2s ease-out;
             }
+            &:hover , &.active{
+            @extend .clr-s ;
+            }
+        }
        
     }
+    
+    
     
      & > input[type="radio"]:checked + label , 
             input[type="checkbox"]:checked + label {
@@ -45,18 +62,7 @@ input[type="checkbox"].z-pop:checked + .popUP { display: block; }
         }
 }
 
-//popUp
 
-.popUP {
-    
-    height:$_100;
-    background-color: rgba(0,0,0,0.85);
-    .popCon {
-        .--x { top:-0.7rem;}
-        top:10vh;
-        min-height: 4rem;
-    }
-}
 
 //tooltip
 
