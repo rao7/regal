@@ -1,4 +1,5 @@
 .inpt{ @extend .p-R;
+    
 input {// input to be get styles
     @extend .bdr0;
     @extend ._z9;
@@ -11,9 +12,20 @@ input {// input to be get styles
     
     &:focus ~ .uLine:after {width:$_100; padding:1px;}
     
-    & ~ label { @extend .p-A; z-index: 0; top:0.5rem; left:0.6rem; transition: all 0.2s ease-out;}
+    & ~ label { @extend .p-A; z-index: 0; top:0.5rem; left:0.6rem; @extend .easy;}
     &:focus ~ label , &:valid ~ label { @extend ._oL; top:-0.6rem; font-size:0.8rem; @extend .clr-s;}
 }
+    &.arwDwn {
+        &:after {
+            right:0.6rem;
+            top:0.6rem;
+            border-color:transparent $ternary $ternary transparent;
+        }
+    }
+    select {
+        -webkit-appearance: none;
+        -moz-appearance:none;
+    }
 }
 
 %underline{
@@ -23,5 +35,5 @@ input {// input to be get styles
     @extend ._oL;
     width:0;
     background-color: $secondary;
-    transition: all 0.2s ease-out;
+    @extend .easy;
 }

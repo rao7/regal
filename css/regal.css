@@ -48,7 +48,7 @@
 
 .g-12-s { width: 98%; }
 
-html body .hide-s, html .hide, html .cBox input[type="radio"], .cBox html input[type="radio"], html .rBox input[type="radio"], .rBox html input[type="radio"], html .cBox input[type="checkbox"], .cBox html input[type="checkbox"], html .rBox input[type="checkbox"], .rBox html input[type="checkbox"] { display: none; }
+html body .hide-s, html .hide, html input[type="checkbox"].z-pop.ddwn:not(:checked) + .dropCon, html input[type="checkbox"].z-pop:not(:checked) + .popUP, html .cBox input[type="radio"], .cBox html input[type="radio"], html .rBox input[type="radio"], .rBox html input[type="radio"], html .cBox input[type="checkbox"], .cBox html input[type="checkbox"], html .rBox input[type="checkbox"], .rBox html input[type="checkbox"] { display: none; }
 html .hide-m, html .hide-l { display: block; }
 @media only screen and (min-width: 45em) and (max-width: 64em) { html .g-1-m { width: 6.3333333333%; }
   html .g-2-m { width: 14.6666666667%; }
@@ -248,13 +248,15 @@ html body { height: 100%; width: 100%; font-family: "Lato", Helvetica, sans-seri
 /* eo px to rem mixin */
 .hand, .btn { cursor: pointer; }
 
-.border, .bdr:not(.bdr0):not(.error):not(.ok), .bdr.error, .bdr.ok { border-style: solid; border-width: 1px; }
+.border, .bdr:not(.bdr0):not(.error):not(.ok):not(.--t), .bdr.error, .bdr.ok, .bdr.--t { border-style: solid; border-width: 1px; }
 
-.bdr:not(.bdr0):not(.error):not(.ok) { border-color: #e1e1e1; }
+.bdr:not(.bdr0):not(.error):not(.ok):not(.--t) { border-color: #e1e1e1; }
 
 .bdr.error { border-color: #f44336; }
 
 .bdr.ok { border-color: #00c853; }
+
+.bdr.--t { border-color: #263238; }
 
 .bdr-B { border-width: 0 0 1px 0; border-color: #e1e1e1; border-style: solid; }
 
@@ -267,6 +269,7 @@ body .m_10 { margin: 0.7142857143rem; }
 body .m_tb_10 { margin: 0.625rem 0; }
 body .m_A { margin: 0 auto; }
 body .p_0, body .-accordian > input:not(:checked) + label + .-accTxt { padding: 0; }
+body .p_5 { padding: 0.3571428571rem; }
 body .p_tb_10 { padding: 0.625rem 0; }
 body .p_10 { padding: 0.625rem; }
 body .p_1 { padding: 1rem; }
@@ -283,17 +286,19 @@ body .p_1 { padding: 1rem; }
 
 .-z3, .btn:not(.flat):hover { -webkit-box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.38); -ms-box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.38); -moz-box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.38); box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.38); }
 
-.easy, .btn, .-tabs ~ input[type="radio"]:not(:checked) + .-tabContent, .arwDwn:after, .-accordian > input + label:after, .-accordian > input:not(:checked) + label + .-accTxt, .-accordian > input + label, .cBox input[type="radio"] + label:after, .rBox input[type="radio"] + label:after, .cBox input[type="checkbox"] + label:after, .rBox input[type="checkbox"] + label:after { -webkit-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
+.easy, .popUP .popCon, .btn, .inpt input ~ label, .inpt input ~ .uLine:after, .-tabs ~ input[type="radio"]:not(:checked) + .-tabContent, .arwDwn:after, .-accordian > input + label:after, .-accordian > input:not(:checked) + label + .-accTxt, .-accordian > input + label, .cBox input[type="radio"] + label:after, .rBox input[type="radio"] + label:after, .cBox input[type="checkbox"] + label:after, .rBox input[type="checkbox"] + label:after { -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
-.-Yscroll, .popUP .popCon { overflow-y: auto; }
+.-Yscroll, .popUP .popCon .popUP-txt { overflow-y: auto; }
 
 .mH10 { min-height: 0.625rem; }
 
 .txtChunk { white-space: nowrap; text-overflow: ellipsis; }
 
-.popUP { height: 100%; background-color: rgba(0, 0, 0, 0.85); }
-.popUP .popCon { top: 10vh; min-height: 4rem; max-height: 76vh; }
-.popUP .popCon .--x { top: -0.7rem; }
+.popUP .popCon .--x, .-x { top: -0.7rem; max-height: 5px; }
+
+.popUP { opacity: 1; height: 100%; background-color: rgba(0, 0, 0, 0.85); }
+.popUP .popCon { top: 10vh; min-height: 4rem; }
+.popUP .popCon .popUP-txt { max-height: 76vh; }
 
 /* px to rem mixin */
 /* eo px to rem mixin */
@@ -309,14 +314,16 @@ body .p_1 { padding: 1rem; }
 
 .inpt input { background: transparent; }
 .inpt input:focus ~ .uLine:after { width: 100%; padding: 1px; }
-.inpt input ~ label { z-index: 0; top: 0.5rem; left: 0.6rem; transition: all 0.2s ease-out; }
+.inpt input ~ label { z-index: 0; top: 0.5rem; left: 0.6rem; }
 .inpt input:focus ~ label, .inpt input:valid ~ label { top: -0.6rem; font-size: 0.8rem; }
+.inpt.arwDwn:after { right: 0.6rem; top: 0.6rem; border-color: transparent #263238 #263238 transparent; }
+.inpt select { -webkit-appearance: none; -moz-appearance: none; }
 
-.inpt input ~ .uLine:after { content: ""; width: 0; background-color: #f50057; transition: all 0.2s ease-out; }
+.inpt input ~ .uLine:after { content: ""; width: 0; background-color: #f50057; }
 
 .-tabs label.active:after, .-tabs label:hover:after, .-tabs .-bar.active:after, .-tabs .-bar:hover:after, .arwDwn:after, .-accordian > input + label:after { content: ""; }
 
-.-tabs ~ input[type="radio"]:checked + .-tabContent, input[type="checkbox"].z-pop:checked + .popUP { display: block; }
+.-tabs ~ input[type="radio"]:checked + .-tabContent { display: block; }
 
 .-tabs ~ input[type="radio"]:not(:checked) + .-tabContent { display: none; }
 .-tabs label:not(.active):not(:hover), .-tabs .-bar:not(.active):not(:hover) { color: #f50057; }

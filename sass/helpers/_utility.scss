@@ -8,9 +8,10 @@
 
 // border definitions 
 .border { border-style:solid; border-width:1px;}
-.bdr:not(.bdr0):not(.error):not(.ok) { @extend .border; border-color:$base; }
+.bdr:not(.bdr0):not(.error):not(.ok):not(.--t) { @extend .border; border-color:$base; }
 .bdr.error { @extend .border; border-color:$error; }
 .bdr.ok { @extend .border; border-color:$ok; }
+.bdr.--t { @extend .border; border-color:$ternary; }
 .bdr-B { @include bdr(0,0,1px,0,$base,solid);}
 
 .bdr0{ border:0;}
@@ -26,6 +27,7 @@ body {
 .m_A {margin:0 auto;}
 
 .p_0 {padding:0;}
+.p_5 {padding:rem(5);}
 .p_tb_10 {padding:0.625rem 0;}
 .p_10 {padding:0.625rem;}
 .p_1 {padding:1rem;}
@@ -43,7 +45,7 @@ body {
 .-z2 {@include shadow (0, 0.2rem, 0.7rem, rgba(0,0,0,0.28));  }
 .-z3 {@include shadow (0, 0.3rem, 0.8rem, rgba(0,0,0,0.38));  }
 
-.easy {  -webkit-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out;}
+.easy {  -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;}
 
 .-Yscroll{ overflow-y: auto;}
 
@@ -54,18 +56,29 @@ body {
 .txtChunk { white-space: nowrap; text-overflow: ellipsis; @extend .flowHide;}
 
 //popUp
-
+%--x ,.-x { top:-0.7rem; max-height: 5px;}
 .popUP {
-    
+    opacity: 1;
     height:$_100;
     background-color: rgba(0,0,0,0.85);
+    
     .popCon {
-        
-        .--x { top:-0.7rem;}
+        @extend .easy;
         top:10vh;
         min-height: 4rem;
+        .--x { @extend %--x; }
+        
+        .popUP-txt{
         max-height: 76vh;
         @extend .-Yscroll;
+            }
     }
 }
 
+
+input[type="checkbox"].z-pop{
+    &.ddwn:not(:checked) + .dropCon  ,
+    &:not(:checked) + .popUP{
+        @extend .hide;
+    }
+}

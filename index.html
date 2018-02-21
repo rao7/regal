@@ -284,7 +284,6 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                          <h5 class="camCase clr-s _C ">Radio &amp; Checkbox </h5>
                           <p class="g-6 rBox">
                         
-                        <b class="fs-14 camCase dB _C clr-b fw-4">radio buttons</b>
                         <span class="p_10 dB">
                          <input type="radio" name="say" id="yes" value="yes"/>
                          <label for="yes" class="camCase fw-5 m10">say yes</label>
@@ -294,7 +293,6 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                          </p>
                          <p class="g-6 cBox">
                            
-                            <b class="fs-14 camCase dB _C clr-b fw-4">checkboxes</b>
                             <span class="p_10 dB">
                           <input type="checkbox" name="say" id="opt1" value="option 1"/>
                          <label for="opt1" class="camCase fw-5 m10">option 1</label>
@@ -331,14 +329,13 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                        
                        </span>
                        
-                       <span class="bdr ok dB m_tb_10">
+                       <span class="bdr ok dB m_tb_10 ">
                         
                        <input type="text"  class="bdr0 inpt m0 p_10 fullCon" placeholder="Success Input"/>
                        
                        </span>
                        
-                       <span class="bdr dB m_tb_10">
-                        
+                       <span class="dB m_tb_10 inpt bdr --t arwDwn">
                        <select class="bdr0 inpt m0 p_10 fullCon" >
                        <option value="1">option 1</option>
                        <option value="2">option 2</option>
@@ -379,7 +376,7 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                       
                      </div>
                      <div class="g-6 card bg-f m_tb_10 fullCon-s f-R p_10 mh20vw">
-                        <h4 class="camCase clr-s">Accordian</h4>
+                        <h5 class="camCase clr-s _C">Accordian</h5>
                    
                        <div class="-accordian camCase">
                          <input type="radio" name="acc" id="_11" class="hide" />
@@ -406,14 +403,16 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                      
                      <div class="g-6 card bg-f m_tb_10 fullCon-s p_10 mh20vw">
                      
-                      <p class="fs-18 _C" > Pop Up</p>
+                      <h5 class="fs-18 _C" > Pop Up</h5>
                       <br/>
                        <label for="pop1" class="btn --s clr-f p_10 bdr0">trigger popUp</label>
                        <input type="checkbox" name="pop" id="pop1" class="z-pop hide"/>
-                       <section class="popUP p-F _oL _oT bg-b fullCon _C _z999 hide">
+                       <section class="popUP p-F _oL _oT bg-b fullCon _C _z999">
                                <div class="popCon card g-7 g-8-m m_A p-R bg-f p_10 _L">
+                                  <header>
+                                  <h5 class="_C p_5 clr-t camCase">popup title goes here </h5>
                                    <label for="pop1" class="p-A clr-t fs-30 _oR --x pd5 hand _z99">&times;</label>
-                                   
+                                   </header>
                                    <div class="popUP-txt row p_10 _J">
                                        <article>
                                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, officia facilis. Nihil, quis cum ipsam quas ea sequi sint nam magnam, rem labore fuga dicta perferendis corporis qui sapiente delectus!</div>
@@ -428,29 +427,30 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                                
                                
                          </section>
-                         <br/>
-                         <br/>
+                        
                          
                          
                        <label for="ddown" class="btn --p clr-f p_10 bdr0">dropdown</label>
                        <div class="row">
-                       <input type="checkbox" name="pop" id="ddown" class="z-pop hide"/>
-                       <section class="popUP p-A _oL _oT bg-b  _C _z999 hide">
-                               <div class="popCon -z3 g-7 g-8-m m_A p-R bg-f p_10 _L">
-                                   <label for="ddown" class="p-A clr-t fs-30 _oR --x pd5 hand _z99">&times;</label>
+                       <input type="checkbox" name="pop" id="ddown" class="z-pop ddwn hide"/>
+                               <div class="dropCon -z3 g-8-s p-A bg-f _L ">
+                                  <header class="popHead">
+                                   <label for="ddown" class="p-A clr-t p_10 fs-20 _oT _oR -x  hand _z99">&times;</label>
+                                   </header>
+                                   <ul>
+                                       <li class="bdr-B p_5">option 1</li>
+                                       <li class="bdr-B p_5">option 2</li>
+                                       <li class="bdr-B p_5">option 3</li>
+                                       <li class="bdr-B p_5">option 4</li>
+                                       <li class="bdr-B p_5">option 5</li>
+                                   </ul>
                                    
-                                   <div class="popUP-txt row p_10 _J">
-                                       <article>
-                                           <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, officia facilis. Nihil, quis cum ipsam quas ea sequi sint nam magnam, rem labore fuga dicta perferendis corporis qui sapiente delectus!</div>
-                                           
-                                       </article>
-                                   </div>
                                </div>
                                
-                               
-                         </section>
                          </div>
                          <br/>
+                         
+                         <p> You can also have pure css dropdowns and popups in your projects, also you can modify them according to your project needs. </p>
                      </div>
                      
                      
@@ -458,7 +458,7 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                  </article>
              </section>
               <section class="snippets hlpr m_tb_10 row">
-                 <h3 class="clr-t _C fw-4 m_tb_10">the helper classes</h3>
+                 <h3 class="clr-t _C fw-4 m_tb_10 camCase">the helper classes</h3>
                  <article class="row mH10 g-11 g-12-m m_A ">
                    
                    <div class="g-4 card bg-f mH10 p_tb_10 ">
@@ -666,7 +666,7 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                    <h6>heading 6</h6>
                    </div>
                    <div class="g-3">
-                     <p class="fs-18 fw-6 clr-s">Default font sizes</p>
+                     <p class="fs-16 fw-6 clr-s camCase">font sizes</p>
                        <span class="fs-10">10px</span>,
                    
                        <span class="fs-12">12px</span>,
@@ -691,7 +691,7 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                    </div>
                    
                    <div class="g-3 fs-20">
-                       <p class=" clr-s fw-6">font weight</p>
+                       <p class="fs-16 clr-s fw-6 camCase">font weight</p>
                        <span class="fw-3">lighter</span>,
                    
                        <span class="fw-4">light</span>,
@@ -706,7 +706,7 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                        
                    </div>
                     <div class="g-3 fs-20">
-                       <p class="clr-s fw-6">text helpers</p>
+                       <p class="clr-s fs-16 fw-6 camCase">text helpers</p>
                        
                      
                     <span class="lCase">Lowercase</span>,

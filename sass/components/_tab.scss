@@ -2,8 +2,7 @@
 // A tab & accordian utility with scss
 
 %pseudo { content:""; @extend .p-A; }
-.-tabs ~ input[type="radio"]:checked + .-tabContent,
-input[type="checkbox"].z-pop:checked + .popUP { display: block;}
+.-tabs ~ input[type="radio"]:checked + .-tabContent { display: block;}
 
 .-tabs{
     & ~ input[type="radio"]:not(:checked) + .-tabContent {
