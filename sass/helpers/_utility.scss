@@ -82,3 +82,34 @@ input[type="checkbox"].z-pop{
         @extend .hide;
     }
 }
+
+
+
+// menu
+
+  ._toggler {max-height:300px; }
+     input[type="checkbox"]._toggle {
+         &:not(:checked) + ._toggler  {opacity: 0; max-height: 0; }
+         &:checked + ._toggler +.-ham { border:0;
+         &:before { top:rem(10); transform: rotate(45deg);}
+      &:after { top:rem(10); transform: rotate(-45deg);}
+    }
+}
+     
+     .-ham  { border-bottom:2px solid #fff; width:2rem;
+         &:before , &:after {
+         content: "";
+         position: absolute;
+         width:100%;
+         height:2px;
+         background: #fff;
+         left:0;
+     }
+     
+         &:after { top:48%; @extend .easy;}
+         &:before { top:0px; @extend .easy;}
+    }
+     
+   
+     
+    

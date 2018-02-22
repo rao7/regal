@@ -286,7 +286,7 @@ body .p_1 { padding: 1rem; }
 
 .-z3, .btn:not(.flat):hover { -webkit-box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.38); -ms-box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.38); -moz-box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.38); box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.38); }
 
-.easy, .popUP .popCon, .btn, .inpt input ~ label, .inpt input ~ .uLine:after, .-tabs ~ input[type="radio"]:not(:checked) + .-tabContent, .arwDwn:after, .-accordian > input + label:after, .-accordian > input:not(:checked) + label + .-accTxt, .-accordian > input + label, .cBox input[type="radio"] + label:after, .rBox input[type="radio"] + label:after, .cBox input[type="checkbox"] + label:after, .rBox input[type="checkbox"] + label:after { -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+.easy, .popUP .popCon, .-ham:after, .-ham:before, .btn, .inpt input ~ label, .inpt input ~ .uLine:after, .-tabs ~ input[type="radio"]:not(:checked) + .-tabContent, .arwDwn:after, .-accordian > input + label:after, .-accordian > input:not(:checked) + label + .-accTxt, .-accordian > input + label, .cBox input[type="radio"] + label:after, .rBox input[type="radio"] + label:after, .cBox input[type="checkbox"] + label:after, .rBox input[type="checkbox"] + label:after { -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
 .-Yscroll, .popUP .popCon .popUP-txt { overflow-y: auto; }
 
@@ -299,6 +299,18 @@ body .p_1 { padding: 1rem; }
 .popUP { opacity: 1; height: 100%; background-color: rgba(0, 0, 0, 0.85); }
 .popUP .popCon { top: 10vh; min-height: 4rem; }
 .popUP .popCon .popUP-txt { max-height: 76vh; }
+
+._toggler { max-height: 300px; }
+
+input[type="checkbox"]._toggle:not(:checked) + ._toggler { opacity: 0; max-height: 0; }
+input[type="checkbox"]._toggle:checked + ._toggler + .-ham { border: 0; }
+input[type="checkbox"]._toggle:checked + ._toggler + .-ham:before { top: 0.7142857143rem; transform: rotate(45deg); }
+input[type="checkbox"]._toggle:checked + ._toggler + .-ham:after { top: 0.7142857143rem; transform: rotate(-45deg); }
+
+.-ham { border-bottom: 2px solid #fff; width: 2rem; }
+.-ham:before, .-ham:after { content: ""; position: absolute; width: 100%; height: 2px; background: #fff; left: 0; }
+.-ham:after { top: 48%; }
+.-ham:before { top: 0px; }
 
 /* px to rem mixin */
 /* eo px to rem mixin */
