@@ -4,9 +4,6 @@
     
 //FONT 
 
-$size :16;
-$font-height: 1.4;
-
 
 :root { font-size: #{$size}px; 
     @media only screen and (max-width: $small) { 

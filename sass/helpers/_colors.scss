@@ -23,3 +23,7 @@
 .clr-info {color:$info;}
 
 body { @extend .clr-t; @extend .bg-b; }
+
+//strip table
+
+.strip-even > *:nth-child(even)  , .strip-odd > *:nth-child(odd){@extend .bg-b;}

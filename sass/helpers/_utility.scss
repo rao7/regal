@@ -30,7 +30,7 @@ body {
 .p_5 {padding:rem(5);}
 .p_tb_10 {padding:0.625rem 0;}
 .p_10 {padding:0.625rem;}
-.p_1 {padding:1rem;}
+.p_16 {padding:1rem;}
 
 }
 
@@ -110,6 +110,32 @@ input[type="checkbox"].z-pop{
          &:before { top:0px; @extend .easy;}
     }
      
-   
      
     
+//tooltip
+
+[data-tip] {@extend .p-R; cursor: default;
+&:hover:before {
+    content: attr(data-tip);
+    @extend .p-A;
+    @extend .card;
+    @extend .clr-t;
+    background-color: $base;
+    bottom:rem(1.9*$size);
+    @extend ._oR;
+    @extend .fs-12;
+    @extend .p_10;
+    @extend .dI;
+    }
+    &:hover:after {
+        content: "";
+        @extend .p-A;
+        border-width:rem(10);
+        @extend .border;
+        border-color: $base transparent transparent;
+        bottom:rem(0.7*$size);
+        right: 10px;
+        filter: drop-shadow(0 3px 1px rgba(0,0,0,0.2));
+    }
+    
+}

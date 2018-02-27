@@ -1,14 +1,15 @@
  // Display properties definition goes here
-			
+body {	
 .dB {display:block;}
 .dIB{ display:inline-block;}
 .dI{ display:inline;}
 .dF{ display:flex;}
 .dIF{ display:inline-flex;}
+}	
 .-table{ display:table;} // <table>
 .-tr{display: table-row;} // <tr>
-.-th , .hide-tbl-thead-s{display:table-header-group;} // <thead>
-.-tfoot{display:table-header-group;} // <thead>
+.-thead , .hide-tbl-thead-s{display:table-header-group;} // <thead>
+.-tfoot{display:table-footer-group;} // <tfoot>
 .-tbody{display:table-row-group;} // <tbody>
 .-td{display: table-cell; vertical-align: middle;} // <td>
 .-vTop {vertical-align: top;}
