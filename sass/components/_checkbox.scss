@@ -17,24 +17,10 @@
     
     @extend .hide;
     
-    & + label:before { @extend %uncheck;}
-    & + label:after {
-        
-        @extend %shared;
-        @extend .p-A;
-        @extend .easy;
-        padding:0;
-        left: 6px;
-        top: 6px;
-        }
-    &:checked + label:after {
-    
-    background-color: $secondary;
-    padding: 5px;
-    left: 4px;
-    top: 2px;
-    
-   @media screen and (max-width:45em){ top: 3px;}
+    & + label:before { @extend %uncheck; }
+  
+    &:checked + label:before {
+    background: radial-gradient(circle, $secondary 38%, white 45%);
 
     }
         

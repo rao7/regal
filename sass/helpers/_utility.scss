@@ -53,7 +53,7 @@ body {
 
 .card { @extend .-z1;  @extend .bR3; }
 
-.txtChunk { white-space: nowrap; text-overflow: ellipsis; @extend .flowHide;}
+.trimTxt { white-space: nowrap; text-overflow: ellipsis; @extend .flowHide;}
 
 //popUp
 %--x ,.-x { top:-0.7rem; max-height: 5px;}

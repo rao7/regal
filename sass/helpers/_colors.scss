@@ -24,6 +24,18 @@
 
 body { @extend .clr-t; @extend .bg-b; }
 
+
+.gradn-L {
+ @include gradient(linear,160deg, $primary+" , "+$secondary);
+ 
+}
+
+.gradn-R {
+ @include gradient(radial,circle, $primary+" , "+$secondary);
+ 
+}
+
 //strip table
 
 .strip-even > *:nth-child(even)  , .strip-odd > *:nth-child(odd){@extend .bg-b;}
+

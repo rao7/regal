@@ -5,9 +5,9 @@
     box-shadow: $v $h $blur $color;
 }
 
-/* px to rem mixin */
+// px to rem mixin 
 
-$baseFontSize : 14;
+$baseFontSize : $size;
 @function rem($pixels, $context: $baseFontSize) {
   @if (unitless($pixels)) {
     $pixels: $pixels * 1px;
@@ -20,22 +20,33 @@ $baseFontSize : 14;
   @return $pixels / $context * 1rem;
 }
 
-/* eo px to rem mixin */
 
-@mixin border-radius($t,$r,$b,$l){ border-radius:$t $r $b $l;}
+@mixin bdr($t,$r,$b,$l,$color,$style){ 
+    @if unitless($t) == unitless($r) == unitless($b) == unitless($l)== true {
+        border: $t $style $color ;
+    }
+    @else{
+    border-width:$t $r $b $l; border-color:$color; border-style:$style; 
+    }
+}
 
-@mixin pad($t,$r,$b,$l){ padding:$t $r $b $l ; }
-
-@mixin mrgn($t,$r,$b,$l){ margin:$t $r $b $l ; }
-
-@mixin bdr($t,$r,$b,$l,$color,$style){ border-width:$t $r $b $l; border-color:$color; border-style:$style; }
-
-@mixin linearGrad ($deg , $color1 , $color2){
-  background-image:  -webkit-linear-gradient($deg , $color1 , $color2);
-  background-image:  -moz-linear-gradient($deg , $color1 , $color2);
-  background-image:  -o-linear-gradient($deg , $color1 , $color2);
-   background-image: -ms-linear-gradient($deg , $color1 , $color2);
-   background-image: linear-gradient($deg , $color1 , $color2);
+@mixin gradient($type, $direction, $colors ){
+    
+    @if $colors && $type && $direction !='' {
+        
+        @if $type == 'linear' {
+          
+            background-image: #{$type}-gradient($direction , unquote($colors));
+            
+        }
+        
+          @if $type == 'radial' {
+              
+              background-image: #{$type}-gradient(circle , unquote($colors));
+            
+        }
+  }
+  
 }
 
 
