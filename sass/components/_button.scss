@@ -19,12 +19,12 @@
     &:not(.btn-o).--s , &.btn-o.--s:hover{@extend .bg-s; @extend .clr-f;}
     &:not(.btn-o).--t , &.btn-o.--t:hover{@extend .bg-t; @extend .clr-f;}
     
-    &.btn-o.ok {@extend .bg0; @include bdr(1px,1px,1px,1px,$ok,solid); @extend .clr-grn;}
-    &.btn-o.error { @extend .bg0; @include bdr(1px,1px,1px,1px,$error,solid); @extend .clr-red;}
-    &.btn-o.info {@extend .bg0; @include bdr(1px,1px,1px,1px,$info,solid);@extend .clr-info;}
-    &.btn-o.--p {@extend .bg0; @include bdr(1px,1px,1px,1px,$primary,solid); @extend .clr-p;}
-    &.btn-o.--s {@extend .bg0; @extend .clr-s; @include bdr(1px,1px,1px,1px,$secondary,solid);}
-    &.btn-o.--t {@extend .bg0; @include bdr(1px,1px,1px,1px,$ternary,solid);@extend .clr-t; }
+    &.btn-o.ok {@extend .bg0; @extend  %bdr-ok; @extend .clr-grn;}
+    &.btn-o.error { @extend .bg0; @extend  %bdr-err; @extend .clr-red;}
+    &.btn-o.info {@extend .bg0; @extend  %bdr-info; @extend .clr-info;}
+    &.btn-o.--p {@extend .bg0; @extend  %bdr-p; @extend .clr-p;}
+    &.btn-o.--s {@extend .bg0; @extend .clr-s; @extend  %bdr-s;}
+    &.btn-o.--t {@extend .bg0; @extend  %bdr-t;  @extend .clr-t; }
 
 
 }

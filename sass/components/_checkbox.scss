@@ -4,7 +4,7 @@
 %shared {  content: "";  border-radius: 10px;  }
 %uncheck {
     @extend %shared;
-    border: 1px solid $ternary;
+    @extend %bdr-t;
     padding: 8px;
     @extend .dIB;
     @extend .-vTop;
@@ -45,8 +45,6 @@
     border-color: transparent transparent $secondary $secondary;
     @extend .p-A;
     left: 4px;
-    top: -1px;
-
     }
         
   }

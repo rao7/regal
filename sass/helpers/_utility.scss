@@ -8,10 +8,13 @@
 
 // border definitions 
 .border { border-style:solid; border-width:1px;}
-.bdr:not(.bdr0):not(.error):not(.ok):not(.--t) { @extend .border; border-color:$base; }
-.bdr.error { @extend .border; border-color:$error; }
-.bdr.ok { @extend .border; border-color:$ok; }
-.bdr.--t { @extend .border; border-color:$ternary; }
+.bdr:not(.bdr0):not(.error):not(.ok):not(.--t):not(.--s):not(.--p) { @extend .border; border-color:$base; }
+.bdr.error , %bdr-err { @extend .border; border-color:$error; }
+.bdr.ok , %bdr-ok{ @extend .border; border-color:$ok; }
+.bdr.info , %bdr-info{ @extend .border; border-color:$info; }
+.bdr.--p , %bdr-p{ @extend .border; border-color:$primary; }
+.bdr.--s , %bdr-s { @extend .border; border-color:$secondary; }
+.bdr.--t , %bdr-t { @extend .border; border-color:$ternary; }
 .bdr-B { @include bdr(0,0,1px,0,$base,solid);}
 
 .bdr0{ border:0;}

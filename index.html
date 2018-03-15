@@ -37,7 +37,7 @@
  
  <div id="app" class="wrapper">
    <input type="checkbox" class="_toggle hide" name="menu" id="toggle"/>
-    <nav class="row bg-t clr-f -menu _toggler easy flowHide">
+    <nav class="row bg-t clr-f -menu _toggler easy flowHide p-F _z99 _oT">
         <div class="g-4">
            <b class="camCase clr-s">What is regal CSS ?</b>
            <p>Well ! it's a SCSS based lightweight and mobile first responsive CSS library which allows you to quick start your web project providing the basic responsive grid system along with essential useful snippets and components which is optional as per your choice. </p>
@@ -73,7 +73,7 @@
             
        
     </nav>
-    <label for="toggle" class="p_10 p-A _oR _z999 -ham m_10 hand"></label>
+    <label for="toggle" class="p_10 p-F _oR _z999 -ham m_10 hand"></label>
      <header class="mainHdr mH10 _C p-R">
          <hgroup class="p_10 ">
             <svg class="p-R" version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -297,8 +297,8 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                      <br/>
                      <h5>Buttons without shadow and radius add ".flat" class</h5>
                      <p class="row">
-                         <button class="btn flat p_10 m_tb_10 --p g-2 ">primary</button>
-                          <button class="btn flat p_10 m_tb_10 --s g-2 g-3-s">secondary</button>
+                         <button class="btn flat p_10 m_tb_10 gradn-L g-3 clr-f">linear gradient</button>
+                          <button class="btn flat p_10 m_tb_10 gradn-R g-2 g-3-s clr-f">radial gradient</button>
                            <button class="btn flat p_10 m_tb_10 --t g-3 g-5-s ">ternory</button>
                             <button class="btn flat p_10 m_tb_10 bg-b clr-0 g-4-s ">base</button>
                      </p>
@@ -352,16 +352,16 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                          <span class="bdr-B dB">
                         
                          <span class="inpt dB">
-                       <input type="text"  class="inpt m0 p_10 fullCon" required/>
+                       <input type="text"  class="m0 p_10 fullCon" required/>
                        <label>Material label</label>
                        <i class="uLine"></i>
                        </span>
                        </span>
                        
-                       <span class="dB m_tb_10">
+                       <span class="inpt dB m_tb_10">
                         
-                       <input type="text"  class="bdr inpt m0 p_10 fullCon" placeholder="Bordered Input"/>
-                       
+                       <input type="text"  class="bdr m0 p_10 fullCon"  required/>
+                       <label>bordered input </label>
                        </span>
                        
                        <span class="dB m_tb_10">
@@ -490,9 +490,13 @@ l-32 22 48 15 c65 20 100 19 150 -3z"/>
                                
                          </div>
                          
-                         <span class="m_tb_10 fw-6 clr-grn f-R" data-tip="A CSS tooltip">This is a tooltip </span>
+                         
                          <br class="clear" />
                          <p> You can also have pure css dropdowns and popups in your projects, also you can modify them according to your project needs. </p>
+                         <p>
+                         A tooltip is also available with this library you just need to add "data-tip" attribute with value to display.
+                         <span class="m_tb_10 fw-6 clr-grn " data-tip="A CSS tooltip">This is a tooltip </span>
+                         </p>
                      </div>
                      
                      

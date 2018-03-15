@@ -24,14 +24,14 @@
 
 body { @extend .clr-t; @extend .bg-b; }
 
-
+//gradient
 .gradn-L {
  @include gradient(linear,160deg, $primary+" , "+$secondary);
  
 }
 
 .gradn-R {
- @include gradient(radial,circle, $primary+" , "+$secondary);
+ @include gradient(radial,circle, $error+" , "+$info);
  
 }
 
