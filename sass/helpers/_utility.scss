@@ -90,23 +90,23 @@ input[type="checkbox"].z-pop{
 
 // menu
 
-  ._toggler {max-height:300px; }
+ 
      input[type="checkbox"]._toggle {
          &:not(:checked) + ._toggler  {opacity: 0; max-height: 0; }
-         &:checked + ._toggler +.-ham { border:0;
-         &:before { top:rem(10); transform: rotate(45deg);}
-      &:after { top:rem(10); transform: rotate(-45deg);}
+         &:checked + ._toggler +.-ham { border:0; 
+         &:before { top:rem(10); transform: rotate(45deg); @extend .bg-b;}
+      &:after { top:rem(10); transform: rotate(-45deg); @extend .bg-b;}
     }
 }
      
-     .-ham  { border-bottom:2px solid #fff; width:2rem;
+     .-ham  { border-bottom:2px solid $black; width:2rem;
          &:before , &:after {
          content: "";
-         position: absolute;
-         width:100%;
+         @extend .p-A;
+         width:$_100;
          height:2px;
-         background: #fff;
-         left:0;
+         @extend .bg-0;
+         @extend ._oL;
      }
      
          &:after { top:48%; @extend .easy;}

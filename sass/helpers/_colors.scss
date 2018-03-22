@@ -1,5 +1,17 @@
 @import '../grid/_global';
 
+:root {
+    --primary : #{$primary};
+    --secondary: #{$secondary};
+    --ternary: #{$ternary};
+    --baseColor : #{$base};
+    --white : #{$white};
+    --black : #{$black};
+    --red : #{$error};
+    --orange : #{$info};
+    --green : #{$ok};
+}
+
 // color definition goes here
 .bg-f { background-color: $white;}
 .bg-0 { background-color:$black ;}
@@ -26,12 +38,12 @@ body { @extend .clr-t; @extend .bg-b; }
 
 //gradient
 .gradn-L {
- @include gradient(linear,160deg, $primary+" , "+$secondary);
+ @include gradient(linear,30deg, $primary+" , "+lighten($secondary , 20%));
  
 }
 
 .gradn-R {
- @include gradient(radial,circle, $error+" , "+$info);
+ @include gradient(radial,circle, darken($ok,8%) +" , "+ $ok);
  
 }
 
